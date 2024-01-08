@@ -1,12 +1,43 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <NavView/>
+    <router-view/>
+      <FooterView/>
 </template>
 
-<style>
+<script>
+import FooterView from './components/FooterView.vue';
+import NavView from './components/NavView.vue'
+
+export default {
+  components: { NavView, FooterView },
+  computed:{
+  fetchHome(){
+   return this.$store.dispatch('fetchHome')
+  },
+  fetchAbout (){
+    return this.$store.dispatch('fetchAbout')
+  },
+  fetchResume (){
+    return this.$store.dispatch('fetchResume')
+  },
+  fetchProjects(){
+    return this.$store.dispatch('fetchProjects')
+  },
+  fetchTestimonials(){
+    return this.$store.dispatch('fetchTestimonials')
+  }
+ },
+ mounted(){
+  this.fetchHome,
+  this.fetchAbout,
+  this.fetchResume,
+  this.fetchProjects,
+  this.fetchTestimonials
+ }
+}
+</script>
+
+<style >
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

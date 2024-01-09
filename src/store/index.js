@@ -8,7 +8,9 @@ export default new Vuex.Store({
 state: {
    home: ' ',
    about: ' ',
-   resume: ' ',
+   education: ' ',
+   experience: ' ',
+   skills: ' ',
    projects: ' ',
    testimonial: ' ',
 },
@@ -19,8 +21,14 @@ mutations: {
    setAbout (state, data) {
      state.about = data
    },
-   setResume (state, data) {
-    state.resume = data
+   setEducation (state, data) {
+    state.education = data
+   },
+   setExperience (state, data) {
+    state.experience = data
+   },
+   setSkills (state, data) {
+    state.skills = data
    },
    setProjects(state, data) {
     state.projects = data
@@ -49,11 +57,31 @@ fetchAbout ({commit}) {
             alert('Could not retrieve the About data', error);
               }
 },
-fetchResume ({commit}) {
+fetchEducation ({commit}) {
   try {
     axios.get(hostedData)
      .then(res => {
-       commit('setResume', res.data.resume)
+       commit('setEducation', res.data.education)
+         })
+           } catch(error) {
+             alert('Could not retrieve the Resume data', error)
+              }
+},
+fetchExperience ({commit}) {
+  try {
+    axios.get(hostedData)
+     .then(res => {
+       commit('setExperience', res.data.experience)
+         })
+           } catch(error) {
+             alert('Could not retrieve the Resume data', error)
+              }
+},
+fetchSkills ({commit}) {
+  try {
+    axios.get(hostedData)
+     .then(res => {
+       commit('setSkills', res.data.skills)
          })
            } catch(error) {
              alert('Could not retrieve the Resume data', error)

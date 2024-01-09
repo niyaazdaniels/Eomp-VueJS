@@ -17,8 +17,14 @@ export default {
   fetchAbout (){
     return this.$store.dispatch('fetchAbout')
   },
-  fetchResume (){
-    return this.$store.dispatch('fetchResume')
+  fetchEducation (){
+    return this.$store.dispatch('fetchEducation')
+  },
+  fetchExperience (){
+    return this.$store.dispatch('fetchExperience')
+  },
+  fetchSkills (){
+    return this.$store.dispatch('fetchSkills')
   },
   fetchProjects(){
     return this.$store.dispatch('fetchProjects')
@@ -30,7 +36,9 @@ export default {
  mounted(){
   this.fetchHome,
   this.fetchAbout,
-  this.fetchResume,
+  this.fetchEducation,
+  this.fetchExperience,
+  this.fetchSkills,
   this.fetchProjects,
   this.fetchTestimonials
  }

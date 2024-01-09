@@ -26,4 +26,27 @@ top: 160px;
 left: 18%;
 padding: 10px
 }
+@media (max-width:300px){
+.card{
+position: relative;
+top: 16vh;
+left: 1.5%;
+width: 290px;
+}
+p {
+    font-size: 10px;
+}
+img {
+height: 350px;
+width: auto;
+}
+i {
+color: black;
+padding: 5px;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+
+}
+}
 </style>

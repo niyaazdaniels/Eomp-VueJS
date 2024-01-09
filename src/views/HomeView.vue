@@ -46,7 +46,7 @@ padding: 10px;
 .card{
 position: relative;
 top: 16vh;
-left: 2%;
+left: 1.5%;
 width: 290px;
 }
 img {

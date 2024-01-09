@@ -10,7 +10,7 @@ export default {
 
 <style>
 footer{
-    position: absolute;
+    position: fixed;
     bottom: 1px;
     width: 100%;
     text-align: center;

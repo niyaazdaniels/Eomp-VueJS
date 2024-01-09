@@ -39,7 +39,7 @@ fetchHome (context) {
           alert('Could not retrieve the Home data', error);
       }
 }, 
-async fetchAbout ({commit}) {
+fetchAbout ({commit}) {
   try {
     axios.get(hostedData)
      .then (res => {
@@ -49,7 +49,7 @@ async fetchAbout ({commit}) {
             alert('Could not retrieve the About data', error);
               }
 },
-async fetchResume ({commit}) {
+fetchResume ({commit}) {
   try {
     axios.get(hostedData)
      .then(res => {
@@ -59,7 +59,7 @@ async fetchResume ({commit}) {
              alert('Could not retrieve the Resume data', error)
               }
 },
-async fetchProjects ({commit}) {
+fetchProjects ({commit}) {
   try {
     axios.get(hostedData)
      .then(res => {
@@ -69,7 +69,7 @@ async fetchProjects ({commit}) {
              alert('Could not retrieve any Projects data', error);
                }
 },
-async fetchTestimonials ({commit}) {
+fetchTestimonials ({commit}) {
   try {
     axios.get(hostedData)
      .then(res => {

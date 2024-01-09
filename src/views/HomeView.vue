@@ -6,7 +6,7 @@
   </div>
   <div class="col-md-8">
     <div class="card-body">
-      <h3 class="card-title">{{ $store.state.home[0].intro }}</h3>
+      <h1 class="card-title display-4">{{ $store.state.home[0].intro }}</h1>
       <p class="card-text">{{ $store.state.home[0].subintro }}</p>
       <p class="card-text">
 <a href="https://github.com/niyaazdaniels" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -34,15 +34,9 @@ this.fetchHome
 <style scoped>
 .card{
 text-align: center;
-top: 150px;
-left: 20%;
+top: 160px;
+left: 19%;
 padding: 10px
-}
-h3 {
-font-size: 4rem;
-}
-p {
-font-size: 1.5rem;
 }
 i {
 color: black;
@@ -62,6 +56,10 @@ width: auto;
 i {
 color: black;
 padding: 5px;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+
 }
 }
 </style>

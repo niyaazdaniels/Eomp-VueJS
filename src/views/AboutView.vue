@@ -1,10 +1,29 @@
 <template>
-    <h1>This is an about page</h1>
+    <div class="card text-center" style="max-width: 1000px;">
+<div class="row g-0">
+  <div class="col-md-4 bg-dark rounded">
+    <img :src="$store.state.home[0].image" class="img-fluid rounded-start">
+  </div>
+  <div class="col-md-8">
+    <div class="card-body">
+      <h1 class="card-title display-4">{{ $store.state.about[0].name }}</h1>
+      <p class="card-text">{{ $store.state.about[0].description }}</p>
+      <p class="card-text"></p>
+    </div>
+  </div>
+</div>
+</div>
 </template>
 <script>
 export default {
   
 }
 </script>
-<style>
+<style scoped>
+.card{
+text-align: center;
+top: 160px;
+left: 18%;
+padding: 10px
+}
 </style>

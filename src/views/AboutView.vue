@@ -26,18 +26,22 @@ top: 160px;
 left: 18%;
 padding: 10px
 }
+img {
+height: 380px;
+width: auto;
+}
 @media (max-width:300px){
 .card{
 position: relative;
 top: 16vh;
-left: 1.5%;
+left: 1%;
 width: 290px;
 }
 p {
     font-size: 10px;
 }
 img {
-height: 350px;
+height: 200px;
 width: auto;
 }
 i {

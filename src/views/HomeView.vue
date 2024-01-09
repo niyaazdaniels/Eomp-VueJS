@@ -42,6 +42,10 @@ i {
 color: black;
 padding: 10px;
 }
+img {
+height: 380px;
+width: auto;
+}
 @media (max-width:300px){
 .card{
 position: relative;
@@ -50,7 +54,7 @@ left: 1.5%;
 width: 290px;
 }
 img {
-height: 350px;
+height: 200px;
 width: auto;
 }
 i {

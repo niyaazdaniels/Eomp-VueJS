@@ -5,15 +5,19 @@
   <header class="resume-header pt-4 pt-md-0">
     <div class="row">
       <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
+        <div class= "picture px-5">
+          <img :src=$store.state.home[0].image>
+        </div>
       </div>
       <div class="col">
         <div class="row p-4 justify-content-center justify-content-md-between">
           <div class="primary-info col-auto">
-            <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">{{ $store.state.about[0].name }}</h1>
-            <div class="title mb-3"></div>
+            <h1 class="title mb-3">{{ $store.state.about[0].name }}</h1>
+            <div class="title mb-3">{{ $store.state.about[0].title }}</div>
             <ul class="list-unstyled">
-              <li class="mb-1"><a class="text-link text-black p-3" href="#"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-1"> {{ $store.state.about[0].email }}</i></a></li>
-              <li><a class="text-link text-black p-3" href="#"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-1"> {{ $store.state.about[0].cell }}</i></a></li>
+              <li><div class="text-link text-black"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-6"></i> {{ $store.state.about[0].email }}</div></li>
+              <li><div class="text-link text-black"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"> </i>{{ $store.state.about[0].cell }}
+              </div></li>
             </ul>
           </div>
         </div>
@@ -50,9 +54,9 @@
                   <div class="d-flex flex-column flex-md-row">
                       <h3 class="resume-position-title font-weight-bold mb-1">{{ $store.state.experience[2].title }}</h3>
                       <div class="resume-company-name ms-auto">{{ $store.state.experience[2].company }}</div>
-                  </div><!--//row-->
+                  </div>
                   <div class="resume-position-time">{{ $store.state.experience[2].year }}</div>
-                </div><!--//resume-timeline-item-header-->
+                </div>
                 <div class="resume-timeline-item-desc">
                   <p>{{ $store.state.experience[0].description }}</p>
                 </div>
@@ -100,7 +104,7 @@
                       <div class="resume-skill-name">{{$store.state.skills[0].title}}</div>
                   </li>
                   <li class="mb-2">
-                      <div class="resume-skill-name">{{$store.state.skills[1].title}}/</div>
+                      <div class="resume-skill-name">{{$store.state.skills[1].title}}</div>
                   </li>
                   <li class="mb-2">
                       <div class="resume-skill-name">{{$store.state.skills[2].title}}</div>
@@ -170,6 +174,14 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.resume-wrapper{
+  top: 60px;
+}
+img{
+  height: 250px;
+}
+i {
+  padding-right: 5px;
+}
 </style>

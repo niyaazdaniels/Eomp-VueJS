@@ -1,11 +1,10 @@
 <template>
-   <article class="resume-wrapper text-center position-relative">
+   <article class="resume-wrapper text-center position-relative overflow-hidden">
 
 <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
   <header class="resume-header pt-4 pt-md-0">
     <div class="row">
       <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-          <img class="picture" :src="$store.state.home[0].image" alt="self-portrait">
       </div>
       <div class="col">
         <div class="row p-4 justify-content-center justify-content-md-between">

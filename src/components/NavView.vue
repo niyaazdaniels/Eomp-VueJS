@@ -37,11 +37,10 @@ nav a{
     color: Black;
     padding-left: 10px;
     margin-right: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 nav{
     letter-spacing: 1px;
     background: #B27352;
-}
-navbar{
 }
 </style>

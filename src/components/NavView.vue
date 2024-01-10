@@ -1,16 +1,16 @@
 <template>
-  <nav class="navbar navbar-expand-sm fixed-top">
+  <nav class="navbar navbar-expand-lg text-uppercase fw-bold navbar-dark fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">ND</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                      </button>
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                         </div>
-                                            <div class="offcanvas-body">
+                                            <div class="offcanvas-body ">
                                                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                             <router-link to="/">Home</router-link> 
                                          <router-link to="/about">About</router-link> 
@@ -34,13 +34,13 @@ export default {
 <style>
 nav a{
     text-decoration: none;
-    color: Black;
+    color: white;
     padding-left: 10px;
     margin-right: 0px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
 }
 nav{
     letter-spacing: 1px;
-    background: #B27352;
+    background: #2ecc71 ;
 }
 </style>

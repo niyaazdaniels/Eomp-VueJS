@@ -1,5 +1,82 @@
 <template>
-  <h1>This is a contact</h1>
+  <section class="ftco-section mt-5">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mt-5 mb-5">
+					<h2 class="heading-section animate__animated animate__fadeInDown animate__slow">Contact Me</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-10 col-md-12">
+					<div class="wrapper">
+						<div class="row justify-content-center">
+							<div class="col-lg-8 mb-2">
+								<div class="row">
+									<div class="col-md-2">
+										<div class="dbox w-100 text-center">
+			<div class="icon d-flex align-items-center justify-content-center"></div></div>
+									</div>
+									<div class="col-md-4">
+										<div class="dbox w-100 text-center">
+		<div class="icon d-flex align-items-center justify-content-center">
+				<span class="fa fa-phone animate__animated animate__fadeInUp"></span>
+		</div>
+			<div class="text animate__animated animate__fadeInUp animate__slow">
+         <p>{{ $store.state.about[0].cell }}</p></div></div>
+									</div>
+									<div class="col-md-4">
+										<div class="dbox w-100 text-center">
+		<div class="icon d-flex align-items-center justify-content-center">
+      <i class="far fa-envelope fa-fw me-2 animate__animated animate__fadeInUp" data-fa-transform="grow-6"></i>
+	</div>
+		<div class="text animate__animated animate__fadeInUp animate__slow">
+  <p> {{ $store.state.about[0].email }}</p></div></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-8">
+								<div class="contact-wrap">
+									<h3 class="mb-4 text-center"></h3>
+									<div id="form-message-warning" class="mb-4 w-100 text-center"></div> 
+									<form action="https://formspree.io/f/xgegvwql" method="POST" id="contactForm" name="contactForm" class="contactForm" required>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+                          
+													<input type="text" class="form-control animate__animated animate__fadeInLeft animate__slow" name="name" id="name" placeholder="Your name" required>
+												</div>
+											</div>
+											<div class="col-md-12"> 
+												<div class="form-group pt-1">
+													<input type="email" class="form-control animate__animated animate__fadeInRight animate__slow" name="email" id="email" placeholder="Your email" required>
+												</div>
+											</div>
+											<div class="col-md-12 pt-1">
+												<div class="form-group">
+													<input type="text" class="form-control animate__animated animate__fadeInLeft animate__slower" name="subject" id="subject" placeholder="What is the subject?" required>
+												</div>
+											</div>
+											<div class="col-md-12 pt-1">
+												<div class="form-group">
+													<textarea name="message" class="form-control animate__animated animate__fadeInRight animate__slower" id="message" cols="30" rows="8" placeholder="Your Message" required></textarea>
+												</div>
+											</div>
+											<div class="col-md-12 pt-1">
+												<div class="form-group">
+													<input type="submit" value="Send" class="btn animate__animated animate__fadeInUp">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </template>
 
 <script>
@@ -9,12 +86,16 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-position: fixed;
-top: 15%;
-  justify-content: center;
-  align-items: center;
+.container{
+  box-shadow: 0px 0px 10px rgb(2, 90, 2);
+  top: 30px;
+  position: relative;
+  background: whitesmoke;
+}
+.btn {
   color: black;
-font-size: 200px;
+  background: silver;
+  padding: 3px;
+  margin: 5px;
 }
 </style>

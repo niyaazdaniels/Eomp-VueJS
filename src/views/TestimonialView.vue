@@ -1,12 +1,12 @@
 <template>
 <div class="container">
-    <h2>Journey So Far</h2>
+    <h2 class="heading animate__animated animate__fadeInDownBig">What others have to say about my journey so far</h2>
     <ul class="cards">
         <li class="card">
             <div>
+                <div class="image"><img :src=$store.state.testimonial[0].image></div>   
                 <h3 class="card-title">{{$store.state.testimonial[0].name}}</h3>
                 <h3 class="card-title">{{$store.state.testimonial[0].surname}}</h3>
-                <div class="image"></div>
                 <div class="card-content">
                     <p>{{$store.state.testimonial[0].testimonial}}</p>
                 </div>
@@ -14,6 +14,7 @@
         </li>
         <li class="card">
             <div>
+                <div class="image"><img :src=$store.state.testimonial[1].image></div>
               <h3 class="card-title">{{$store.state.testimonial[1].name}}</h3>
                 <h3 class="card-title">{{$store.state.testimonial[1].surname}}</h3>
                 <div class="card-content">
@@ -23,6 +24,7 @@
         </li>
         <li class="card">
             <div>
+                <div class="image"><img :src=$store.state.testimonial[2].image></div>
               <h3 class="card-title">{{$store.state.testimonial[2].name}}</h3>
                 <h3 class="card-title">{{$store.state.testimonial[2].surname}}</h3>
                 <div class="card-content">
@@ -32,6 +34,7 @@
         </li>
         <li class="card">
             <div>
+                <div class="image"><img :src=$store.state.testimonial[3].image></div>
               <h3 class="card-title">{{$store.state.testimonial[3].name}}</h3>
                 <h3 class="card-title">{{$store.state.testimonial[3].surname}}</h3>
                 <div class="card-content">
@@ -42,6 +45,7 @@
         </li>
         <li class="card">
             <div>
+                <div class="image"><img :src=$store.state.testimonial[4].image></div>
               <h3 class="card-title">{{$store.state.testimonial[4].name}}</h3>
                 <h3 class="card-title">{{$store.state.testimonial[4].surname}}</h3>
                 <div class="card-content">
@@ -51,6 +55,7 @@
         </li>
         <li class="card">
             <div>
+                <div class="image"><img :src=$store.state.testimonial[5].image></div>
               <h3 class="card-title">{{$store.state.testimonial[5].name}}</h3>
                 <h3 class="card-title">{{$store.state.testimonial[5].surname}}</h3>
                 <div class="card-content">
@@ -60,10 +65,21 @@
         </li>
         <li class="card">
             <div>
+                <div class="image"><img :src=$store.state.testimonial[6].image></div>
               <h3 class="card-title">{{$store.state.testimonial[6].name}}</h3>
                 <h3 class="card-title">{{$store.state.testimonial[6].surname}}</h3>
                 <div class="card-content">
                   <p>{{$store.state.testimonial[6].testimonial}}</p> 
+                </div>
+            </div>
+        </li>
+        <li class="card">
+            <div>
+                <div class="image"><img :src=$store.state.testimonial[7].image></div>
+              <h3 class="card-title">{{$store.state.testimonial[7].name}}</h3>
+                <h3 class="card-title">{{$store.state.testimonial[7].surname}}</h3>
+                <div class="card-content">
+                  <p>{{$store.state.testimonial[7].testimonial}}</p> 
                 </div>
             </div>
         </li>
@@ -83,15 +99,16 @@ export default {
   top: 150px
 }
 .container {
-    max-width: 1200px;
-    padding: 0 10px;
+    max-width: auto;
+    padding: 0px 30px;
     margin: 0 auto;
     top: 100px;
     position: relative;
 }
 h2 {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 1em;
+    text-decoration: underline;
 }
 .cards {
     display: flex;
@@ -108,11 +125,13 @@ h2 {
     padding: 10px;
     background: var(--white);
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    box-shadow: 0 0px 10px rgb(2, 90, 2);
     scroll-snap-align: start;
     transition: all 0.2s;
     font-size: 12px;
+    border: none;
 }
+
 .card .card-title {
     font-size: 1.1rem;
 }
@@ -126,6 +145,9 @@ h2 {
     height: 12px;
     background: #221D23;
     border-radius: 30px;
+}
+img{
+    height: 80px;
 }
 
 @media (min-width: 500px) {

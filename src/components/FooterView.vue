@@ -1,18 +1,24 @@
 <template>
-  <footer>&copy; Copyright Niyaaz Daniels</footer>
+  <footer>&copy; Copyright | Niyaaz Daniels | <span>{{ currentYear }}</span> | All rights reserved</footer>
 </template>
 
 <script>
 export default {
-
+data(){
+  return {
+    currentYear: new Date().getFullYear()
+  }
+}
 }
 </script>
 
 <style>
 footer{
-    position: fixed;
-    bottom: 1px;
+    background: #2ecc71;
+    bottom: 0px;
     width: 100%;
     text-align: center;
+    position: fixed;
+    padding: 5px;
 }
 </style>

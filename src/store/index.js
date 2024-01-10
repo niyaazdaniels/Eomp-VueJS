@@ -6,13 +6,13 @@ const hostedData = 'https://niyaazdaniels.github.io/JSON/'
 
 export default new Vuex.Store({
 state: {
-   home: ' ',
-   about: ' ',
-   education: ' ',
-   experience: ' ',
-   skills: ' ',
-   projects: ' ',
-   testimonial: ' ',
+   home: null,
+   about: null,
+   education: null,
+   experience: null,
+   skills: null,
+   projects: null,
+   testimonial: null,
 },
 mutations: {
    setHome (state, data) {
@@ -61,11 +61,11 @@ fetchEducation ({commit}) {
   try {
     axios.get(hostedData)
      .then(res => {
-       commit('setEducation', res.data.education)
-         })
-           } catch(error) {
-             alert('Could not retrieve the Resume data', error)
-              }
+          commit('setEducation', res.data.education)
+      })
+  } catch(error) {
+      alert('Could not retrieve the Resume data', error)
+      }
 },
 fetchExperience ({commit}) {
   try {

@@ -14,7 +14,6 @@ data(){
 
 <style>
 footer{
-    background: #2ecc71;
     bottom: 0px;
     width: 100%;
     text-align: center;

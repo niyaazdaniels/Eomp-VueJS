@@ -51,21 +51,21 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: #f8f9fa ;
+ 
 }
 nav {
-  padding: 30px;
+  padding: 20px;
 }
 nav a {
   color: white;
 }
 nav a.router-link-exact-active {
-  color:   black;
-  border-bottom: 2px solid #e74c3c;  
+  color:   #F1B24A;
 }
 body{
-  background: #f8f9fa;
-  color: #333333;
+  background: linear-gradient(90deg,#164A41,#4D774E, #9DC88D) ;
+  color: #FFFFFF;
+  overflow-x: hidden;
 }
 
 </style>

@@ -41,6 +41,5 @@ nav a{
 }
 nav{
     letter-spacing: 1px;
-    background: #2ecc71 ;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <h2 class="heading animate__animated animate__fadeInDownBig">What others have to say about my journey so far</h2>
+    <h2 class="heading animate__animated animate__fadeInDownBig text-uppercase fw-semibold">What others have to say about my journey so far</h2>
     <ul class="cards">
         <li class="card">
             <div>
@@ -102,13 +102,13 @@ export default {
     max-width: auto;
     padding: 0px 30px;
     margin: 0 auto;
-    top: 100px;
+    top: 80px;
     position: relative;
 }
 h2 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 1em;
-    text-decoration: underline;
+    text-decoration-line: underline;
 }
 .cards {
     display: flex;
@@ -123,23 +123,24 @@ h2 {
     flex-direction: column;
     flex: 0 0 100%;
     padding: 10px;
-    background: var(--white);
+    color: #FFFFFF;
+    background: #333333;
     border-radius: 12px;
-    box-shadow: 0 0px 10px rgb(2, 90, 2);
     scroll-snap-align: start;
     transition: all 0.2s;
-    font-size: 12px;
     border: none;
 }
 
 .card .card-title {
     font-size: 1.1rem;
+    text-transform: uppercase;
 }
 
 .card .card-content {
     margin: 10px 0;
     max-width: 90%;
     margin-left: 15px;
+    font-size: 12px;
 }
 .cards::-webkit-scrollbar {
     height: 12px;

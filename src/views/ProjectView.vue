@@ -1,6 +1,6 @@
 <template>
  <div class="container">
-    <h2 class="heading text-uppercase animate__animated animate__fadeInDownBig animate__slow">{{ $store.state.projects[6].heading }}</h2>
+    <h2 class="heading text-uppercase animate__animated animate__fadeInDownBig animate__slow fw-semibold">{{ $store.state.projects[6].heading }}</h2>
     <ul class="cards">
         <li class="card">
             <div>
@@ -88,7 +88,7 @@ h2{
     max-width: 1300px;
     padding: 0 10px;
     margin: 0 auto;
-    top: 150px;
+    top: 100px;
     position: relative;
 }
 .cards {
@@ -105,13 +105,14 @@ h2{
     flex-direction: column;
     flex: 0 0 100%;
     padding: 10px;
-    background: var(--white);
+    background: #4D774E;
     border-radius: 12px;
-    box-shadow: 0 0px 10px rgb(2, 123, 2);
+    box-shadow: 0 0px 8px #F1B24a;
     scroll-snap-align: start;
-    transition: all 0.2s;
+    transition: all 0.4s;
     font-size: 12px;
     border: none;
+    color: #FFFFFF;
 }
 .card .card-title {
     font-size: 1.1rem;

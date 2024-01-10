@@ -6,13 +6,13 @@ const hostedData = 'https://niyaazdaniels.github.io/JSON/'
 
 export default new Vuex.Store({
 state: {
-   home: null,
-   about: null,
-   education: null,
-   experience: null,
-   skills: null,
-   projects: null,
-   testimonial: null,
+   home: ' ',
+   about: ' ',
+   education: ' ',
+   experience: ' ',
+   skills: ' ',
+   projects: ' ',
+   testimonial: ' ',
 },
 mutations: {
    setHome (state, data) {

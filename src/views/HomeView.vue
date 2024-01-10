@@ -1,16 +1,16 @@
 <template>
- <section class="py-3 py-md-5 py-xl-8">
-  <div class="container overflow-hidden">
-    <div class="row gy-4 gy-lg-0">
-      <div class="col-12 col-lg-6">
-          <div class="card border-0">
-            <img class="card-img-top img-fluid m-0 animate__animated animate__fadeInDownBig animate__slower" loading="lazy" :src=$store.state.home[0].image alt="Me">
-            <div class="card-body border-0 bg-white p-4">
-              <div class="entry-header border-0 ">
-                <h2 class="card-title entry-title mb-0 animate__animated animate__fadeInLeftBig animate__slower ">{{$store.state.home[0].intro  }}</h2>
+ <section class="cards-home py-3 py-md-5 py-xl-8 overflow-hidden">
+  <div class="container ">
+    <div class="row gy-4 gy-lg-0 ">
+      <div class="col-12 col-lg-6 ">
+          <div class="card border-0 ">
+            <img class="card-img-top img-fluid m-0 animate__animated animate__fadeInDownBig animate__slower " loading="lazy" :src=$store.state.home[0].image alt="Me">
+            <div class="card-body  p-4 ">
+              <div class="entry-header border-0   ">
+                <h2 class="card-title entry-title mb-0 text-uppercase animate__animated animate__fadeInLeftBig animate__slower  ">{{$store.state.home[0].intro  }}</h2>
                 <h6 class="card-title entry-title mb-0 animate__animated animate__fadeInRightBig animate__slower">{{$store.state.home[0].title  }}</h6>
               </div>
-              <p class="card-text entry-summary text-secondary animate__animated animate__fadeInUpBig animate__slower ">{{ $store.state.home[0].subintro }}</p>
+              <p class="card-text entry-summary animate__animated animate__fadeInUpBig animate__slower ">{{ $store.state.home[0].subintro }}</p>
               <p class="card-text">
               <a href="https://github.com/niyaazdaniels" target="_blank"><i class="fa-brands fa-github animate__animated animate__rotateIn animate__slower"></i></a>
               <a href="https://twitter.com/daniels_niyaaz" target="_blank"><i class="fa-brands fa-twitter animate__animated animate__rotateIn animate__slower "></i></a>
@@ -43,7 +43,7 @@ img {
   width: 200px;
   height: 100%;
   position: relative;
-  left: 190px;
+  left: 170px;
 }
 i {
 color: black;
@@ -54,39 +54,42 @@ border-radius: 45%;
 i:hover{
   transition: all .5s ease-in-out;
   box-shadow: 0px 0px 10px black;
-  background: #e74c3c;
+  background: #F1B24A;
 } 
 #btn{
   padding: 1px;
   border-radius: 5%;
 }
 #btn:hover{
-  transform: scale(1.2);
+  color: #F1B24A;
   transition: all .5s ease-in-out;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 10px #333333;
   outline: none;
 }
-.card{
-text-align: center;
-top: 20px;
-left: 50%;
-padding: 10px;
-height: 100%;
+.cards-home{
+  background-color: transparent;
+  display: flex;
+  position: relative;
+  top:  70px;
+  left: 290px;
 }
-
-@media screen and (max-width:768px){
-  .card{
-    display: flex;
-    top: 2rem;
-    width: 600px;
-    left: 9%;
-  }
+.card{
+  background-color: transparent;
+  color: #FFFFFF;
+}
+  @media screen and (max-width:768px) {
+ .cards-home{
+    display: flex ;
+    position: relative ;
+    top: 2rem ;
+    width: 600px ;
+    right: 100px ;
+ }
+}
   h1{
     font-size: 2rem;
   }
  
-
-}
 @media screen and (max-width:425px){
 .card{
 display: flex;
@@ -116,7 +119,7 @@ padding: 5px;
 }
 }
 @media screen and (max-width:375px){
-.card{
+.cards-home{
 display: flex;
 top: 16vh;
 left: 0px;
@@ -144,7 +147,7 @@ padding: 5px;
 }
 }
 @media screen and (max-width:320px){
-.card{
+.cards-home{
 display: flex;
 top: 16vh;
 left: 4px;
@@ -172,7 +175,7 @@ padding: 5px;
 }
 }
 @media screen and (max-width:300px){
-.card{
+.cards-home{
 display: flex;
 top: 16vh;
 left: -7px;

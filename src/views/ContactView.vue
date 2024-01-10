@@ -37,7 +37,7 @@
 							<div class="col-lg-8">
 								<div class="contact-wrap">
 									<h3 class="mb-4 text-center"></h3>
-									<div id="form-message-warning" class="mb-4 w-100 text-center"></div> 
+									<div id="form-message-warning" class="w-100 text-center"></div> 
 									<form action="https://formspree.io/f/xgegvwql" method="POST" id="contactForm" name="contactForm" class="contactForm" required>
 										<div class="row">
 											<div class="col-md-12">
@@ -87,15 +87,17 @@ export default {
 
 <style scoped>
 .container{
-  box-shadow: 0px 0px 10px rgb(2, 90, 2);
-  top: 30px;
+  top: 20px;
   position: relative;
-  background: whitesmoke;
 }
 .btn {
   color: black;
-  background: silver;
+  background: #FFFFFF;
   padding: 3px;
   margin: 5px;
+}
+.btn:hover {
+  color: #F1b24a;
+ background: #164A24;
 }
 </style>

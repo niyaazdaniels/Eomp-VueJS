@@ -1,4 +1,9 @@
 <template>
+  <div class="container">
+    <h2 class="text-heading fw-semibold text-uppercase text-decoration-underline">About Me</h2>
+  </div>
+  <div class="container">
+
     <div class="card text-center animate__animated animate__bounceIn " style="max-width: 1000px;">
 <div class="row g-0">
   <div class="col-lg-4 ">
@@ -12,6 +17,7 @@
   </div>
 </div>
 </div>
+  </div>
 </template>
 <script>
 export default {
@@ -21,17 +27,18 @@ export default {
 <style scoped>
 body{
   font-family: 'Roboto', sans-serif;
-
 }
 .card{
 text-align: center;
-top: 80px;
-left: 11%;
 padding: 10px;
 background: #164A41;
 color: #FFFFFF;
 border: none;
+border-radius: 5px;
+}
+.card:hover{
 box-shadow: 0px 0px 8px #FFFFFF;
+
 }
 img {
 height: 380px;
@@ -40,24 +47,65 @@ width: auto;
 p {
   font-size: 1rem;
 }
-@media (max-width:300px){
-.card{
-position: relative;
-top: 16vh;
-left: 1%;
-width: 290px;
+.text-heading{
+  color: #F1B24A;
 }
-p {
-    font-size: 10px;
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+@media (max-width: 300px){
+.card{
+  display: flex  !important;
+  position: relative !important;
+  top: -15px !important;
 }
 img {
-height: 200px;
+height: 150px !important ;
 width: auto;
 }
-i {
-color: black;
-padding: 5px;
+.text-heading{
+font-size: 18px !important;
+top: -30px;
+position: relative;
 }
-
+p {
+  font-size: 8px !important;
+}
+}
+@media (max-width: 320px){
+ .card{
+  display: flex !important;
+  top: 60px !important;
+  height: 450px;
+ }
+ img{
+  height: 150px;
+  width: auto;
+ }
+ h1{
+  font-size: 16px !important;
+ }
+ p{
+  font-size: 9px !important;
+ }
+}
+@media (max-width: 768px){
+  .card{
+    display: flex;
+    top: 30px;
+  }
+  img{
+    height: 150px !important;
+    width: auto;
+}
+h1{
+  font-size: 24px;
+}
+p{
+  font-size: 14px;
+}
 }
 </style>

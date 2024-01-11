@@ -1,81 +1,30 @@
 <template>
- <div class="container">
-    <h2 class="heading text-uppercase animate__animated animate__fadeInDownBig animate__slow fw-semibold">{{ $store.state.projects[6].heading }}</h2>
-    <ul class="cards">
-        <li class="card">
+ <div class="container d-flex flex-column" v-if="$store.state.projects.length > 0" >
+    <h2 class="heading text-uppercase animate__animated animate__fadeInDownBig animate__slow fw-semibold text-decoration-underline">Projects</h2>
+    <div class="cards">
+        <div class="card " v-for="project in $store.state.projects" :key="project">
             <div>
-                <div class="image animate__animated animate__fadeInUpBig"><img :src=$store.state.projects[0].image></div>   
+                <div class="image animate__animated animate__fadeInUpBig"><img :src=project.image></div>   
                 <div class="card-body">
-        <h5 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{ $store.state.projects[0].name }}</h5>
-        <p class="card-text animate__animated animate__fadeInUpBig animate__slow">{{ $store.state.projects[0].description }}</p>
-        <a :href= $store.state.projects[0].gitHub class="btn animate__animated animate__fadeInUpBig animate__slower " target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a :href="$store.state.projects[0].hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
+        <h5 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{project.name}}</h5>
+        <p class="card-text animate__animated animate__fadeInUpBig animate__slow">{{project.description }}</p>
+        <a :href= project.gitHub class="btn animate__animated animate__fadeInUpBig animate__slower " target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a :href="project.hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
       </div>
             </div>
-        </li>
-        <li class="card">
-          <div>
-                <div class="image animate__animated animate__fadeInUpBig"><img :src=$store.state.projects[1].image></div>   
-                <div class="card-body">
-        <h5 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{ $store.state.projects[1].name }}</h5>
-        <p class="card-text animate__animated animate__fadeInUpBig animate__slow">{{ $store.state.projects[1].description }}</p>
-        <a :href= $store.state.projects[1].gitHub class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a :href="$store.state.projects[1].hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
-      </div>
-      </div>
-        </li>
-        <li class="card">
-          <div>
-                <div class="image animate__animated animate__fadeInUpBig"><img :src=$store.state.projects[2].image></div>   
-                <div class="card-body">
-        <h5 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{ $store.state.projects[2].name }}</h5>
-        <p class="card-text animate__animated animate__fadeInUpBig animate__slow">{{ $store.state.projects[2].description }}</p>
-        <a :href= $store.state.projects[2].gitHub class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a :href="$store.state.projects[2].hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
-      </div>
-      </div>
-        </li>
-        <li class="card">
-          <div>
-                <div class="image animate__animated animate__fadeInUpBig"><img :src=$store.state.projects[3].image></div>   
-                <div class="card-body">
-        <h5 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{ $store.state.projects[3].name }}</h5>
-        <p class="card-text animate__animated animate__fadeInUpBig animate__slow">{{ $store.state.projects[3].description }}</p>
-        <a :href= $store.state.projects[3].gitHub class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a :href="$store.state.projects[3].hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
-      </div>
-      </div>
-        </li>
-        <li class="card">
-          <div>
-                <div class="image animate__animated animate__fadeInUpBig"><img :src=$store.state.projects[4].image></div>   
-                <div class="card-body">
-        <h5 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{ $store.state.projects[4].name }}</h5>
-        <p class="card-text animate__animated animate__fadeInUpBig animate__slow">{{ $store.state.projects[4].description }}</p>
-        <a :href= $store.state.projects[4].gitHub class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a :href="$store.state.projects[4].hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
-      </div>
-      </div>
-        </li>
-        <li class="card">
-          <div>
-                <div class="image animate__animated animate__fadeInUpBig"><img :src=$store.state.projects[5].image></div>   
-                <div class="card-body">
-        <h5 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{ $store.state.projects[5].name }}</h5>
-        <p class="card-text animate__animated animate__fadeInUpBig animate__slow">{{ $store.state.projects[5].description }}</p>
-        <a :href= $store.state.projects[5].gitHub class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a :href="$store.state.projects[5].hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
-      </div>
-      </div>
-        </li>
-       
-    </ul>
+          </div>
+        </div>
+</div>
+<div v-else>
+  <SpinnerView/>
 </div>
 </template>
 
 <script>
-export default {
+import SpinnerView from '@/components/SpinnerView.vue';
 
+export default {
+    components: { SpinnerView }
 }
 </script>
 
@@ -83,13 +32,16 @@ export default {
 
 h2{
   font-size:28px;
+  color: #f1b24a;
 }
 .container {
-    max-width: 1300px;
+    max-width: 1500px;
     padding: 0 10px;
     margin: 0 auto;
-    top: 100px;
+    top: 180px;
+    height: 300px;
     position: relative;
+    height: max-content;
 }
 .cards {
     display: flex;
@@ -105,14 +57,16 @@ h2{
     flex-direction: column;
     flex: 0 0 100%;
     padding: 10px;
-    background: #4D774E;
-    border-radius: 12px;
-    box-shadow: 0 0px 8px #F1B24a;
-    scroll-snap-align: start;
+    background: linear-gradient(90deg, #4D774E, #164A41);
+    border-radius: 5px;
     transition: all 0.4s;
     font-size: 12px;
     border: none;
     color: #FFFFFF;
+}
+.card:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 8px white;
 }
 .card .card-title {
     font-size: 1.1rem;
@@ -128,9 +82,6 @@ h2{
 }
 img{
     height: 80px;
-}
-img:hover{
-  transform: rotate(360deg)
 }
 i {
 color: black;

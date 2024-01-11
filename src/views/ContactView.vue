@@ -1,9 +1,9 @@
 <template>
-  <section class="ftco-section mt-5">
+  <section class="ftco-section ">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mt-5 mb-5">
-					<h2 class="heading-section animate__animated animate__fadeInDown animate__slow">Contact Me</h2>
+					<h2 class="heading-section animate__animated animate__fadeInDown animate__slow text-uppercase fw-semibold text-decoration-underline">Contact Me</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -63,7 +63,7 @@
 											</div>
 											<div class="col-md-12 pt-1">
 												<div class="form-group">
-													<input type="submit" value="Send" class="btn animate__animated animate__fadeInUp">
+													<input type="submit" value="SUBMIT" class="button fw-bold text-uppercase animate__animated animate__fadeInUp">
 													<div class="submitting"></div>
 												</div>
 											</div>
@@ -90,14 +90,22 @@ export default {
   top: 20px;
   position: relative;
 }
-.btn {
-  color: black;
-  background: #FFFFFF;
-  padding: 3px;
-  margin: 5px;
+input:hover{
+	box-shadow: 0px 0px 15px black;
 }
-.btn:hover {
+textarea:hover{
+	box-shadow: 0px 0px 15px black;
+}
+.button {
+  color: #FFFFFF;
+  background: #4D774E;
+}
+.button:hover {
   color: #F1b24a;
- background: #164A24;
+  background: #164A24;
 }
+.heading-section{
+	color: #F1b24a;
+}
+
 </style>

@@ -12,7 +12,7 @@ state: {
    experience: ' ',
    skills: ' ',
    projects: ' ',
-   testimonial: ' ',
+   testimonials: ' ',
 },
 mutations: {
    setHome (state, data) {
@@ -34,7 +34,7 @@ mutations: {
     state.projects = data
    },
    setTestimonials(state, data){
-    state.testimonial = data
+    state.testimonials = data
    }
 },
 actions: {

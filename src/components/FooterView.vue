@@ -1,5 +1,11 @@
 <template>
-  <footer>&copy; Copyright | Niyaaz Daniels | <span>{{ currentYear }}</span> | All rights reserved</footer>
+  <div class="container-footer">
+  <footer class="d-flex justify-content-center align-items-center ">
+    <div class="d-flex align-items-center bottom-0">
+      <span class="mb-md-0 text-center" style="color: white;">&copy; Niyaaz Daniels | <span>{{ currentYear }}</span> | All rights reserved</span>
+    </div>
+  </footer>
+</div>
 </template>
 
 <script>
@@ -12,12 +18,14 @@ data(){
 }
 </script>
 
-<style>
+<style scoped>
 footer{
-    bottom: 0px;
+    position: relative;
+    margin-top: 300px;
+    text-transform: uppercase;
     width: 100%;
-    text-align: center;
-    position: fixed;
-    padding: 5px;
+}
+span{
+  color: #F1b24a;
 }
 </style>

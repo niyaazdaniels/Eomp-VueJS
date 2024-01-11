@@ -1,15 +1,18 @@
 <template>
     <NavView/>
-    <FooterView/>
     <router-view/>
+    <spinner-view/>
+
+    <FooterView/>
 </template>
 
 <script>
 import FooterView from './components/FooterView.vue';
 import NavView from './components/NavView.vue'
+import SpinnerView from './components/SpinnerView.vue';
 
 export default {
-  components: { NavView, FooterView },
+  components: { NavView, FooterView, SpinnerView },
   computed:{
   fetchHome(){
    return this.$store.dispatch('fetchHome')

@@ -43,22 +43,22 @@
 											<div class="col-md-12">
 												<div class="form-group">
                           
-													<input type="text" class="form-control animate__animated animate__fadeInLeft animate__slow" name="name" id="name" placeholder="Your name" required>
+													<input type="text" class="form-control animate__animated animate__fadeInLeft animate__slow" name="name" id="name" placeholder="Your name" autocomplete="off" required>
 												</div>
 											</div>
 											<div class="col-md-12"> 
 												<div class="form-group pt-1">
-													<input type="email" class="form-control animate__animated animate__fadeInRight animate__slow" name="email" id="email" placeholder="Your email" required>
+													<input type="email" class="form-control animate__animated animate__fadeInRight animate__slow" name="email" id="email" placeholder="Your email" autocomplete="off" required>
 												</div>
 											</div>
 											<div class="col-md-12 pt-1">
 												<div class="form-group">
-													<input type="text" class="form-control animate__animated animate__fadeInLeft animate__slower" name="subject" id="subject" placeholder="What is the subject?" required>
+													<input type="text" class="form-control animate__animated animate__fadeInLeft animate__slower" name="subject" id="subject" placeholder="What is the subject?"  autocomplete="off" required>
 												</div>
 											</div>
 											<div class="col-md-12 pt-1">
 												<div class="form-group">
-													<textarea name="message" class="form-control animate__animated animate__fadeInRight animate__slower" id="message" cols="30" rows="8" placeholder="Your Message" required></textarea>
+													<textarea name="message" class="form-control animate__animated animate__fadeInRight animate__slower" id="message" cols="30" rows="8" placeholder="Your Message" autocomplete="off"  required></textarea>
 												</div>
 											</div>
 											<div class="col-md-12 pt-1">
@@ -106,6 +106,13 @@ textarea:hover{
 }
 .heading-section{
 	color: #F1b24a;
+}
+input{
+	background: #f5f3f3;
+}
+textarea{
+	background: #f5f3f3;
+
 }
 
 </style>

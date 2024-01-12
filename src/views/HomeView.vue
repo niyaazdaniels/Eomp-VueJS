@@ -2,7 +2,7 @@
   <div class="container plus overflow-hidden">
 
     <section class="cards-home overflow-hidden py-3 py-md-5 py-xl-8 overflow-hidden d-flex justify-content-center align-items-center h-100 bg-transparent">
-     <div class="container v">
+     <div class="container">
        <div class="row gy-4 gy-lg-0 ">
          <div class="col-12 col-lg-6 ">
              <div class="card border-0 ">
@@ -10,7 +10,7 @@
                <div class="card-body  p-4 ">
                  <div class="entry-header border-0   ">
                    <h2 class="card-title entry-title mb-0 text-uppercase animate__animated animate__fadeInLeftBig animate__slower  ">{{$store.state.home[0].intro  }}</h2>
-                   <h6 class="card-title entry-title mb-0 animate__animated animate__fadeInRightBig animate__slower">{{$store.state.home[0].title  }}</h6>
+                   <h6 class="card-title entry-title mb-0 animate__animated animate__fadeInRightBig animate__slower">{{ $store.state.home[0].title }}</h6>
                  </div>
                  <p class="card-text entry-summary animate__animated animate__fadeInUpBig animate__slower ">{{ $store.state.home[0].subintro }}</p>
                  <p class="card-text">
@@ -79,15 +79,16 @@ i:hover{
   height: 100vh;
   position: relative;
 }
-
 .card{
   background-color: transparent;
   color: #FFFFFF;
   width: 600px;
 }
 
-@media (max-width:300px) {
+@media (max-width:400px) {
   .plus{
+    display: flex;
+    flex-direction: column;
     position: relative;
     left: -162px !important;
   }
@@ -110,13 +111,14 @@ p{
   font-size: 10px;
 }
 }
-@media (max-width:320px) {
+@media (max-width:525px) {
   .plus{
     position: relative;
-    left: -150px;
+    left: -50px;
+    display: flex;
   }
   .container{
-    width: 141vw ;
+    width: 100vw ;
   }
 img{
   width: 150px;

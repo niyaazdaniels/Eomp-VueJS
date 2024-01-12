@@ -22,14 +22,12 @@
 
 <script>
 import SpinnerView from '@/components/SpinnerView.vue';
-
 export default {
     components: { SpinnerView }
 }
 </script>
 
 <style scoped>
-
 h2{
   font-size:28px;
   color: #f1b24a;

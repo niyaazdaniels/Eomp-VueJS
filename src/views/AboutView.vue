@@ -34,10 +34,10 @@ padding: 10px;
 background: #164A41;
 color: #FFFFFF;
 border: none;
-border-radius: 5px;
+border-radius: 0px;
 }
 .card:hover{
-box-shadow: 0px 0px 8px #FFFFFF;
+box-shadow: 0px 0px 12px #FFFFFF;
 
 }
 img {

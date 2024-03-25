@@ -1,67 +1,42 @@
 <template>
-  <div class="container plus overflow-hidden">
+  <div class="card container-fluid d-flex align-items-center border-0 overflow-hidden h-100">
+  <img :src=$store.state.home[0].image class="card-img-top animate__animated animate__fadeInDownBig animate__slower  " alt="me">
+  <div class="card-body">
+    <h5 class="card-title fs-1 fw-semibold animate__animated animate__fadeInRightBig animate__slower text-uppercase ">{{ $store.state.home[0].title }}</h5>
+    <p class="card-text fs-3 animate__animated animate__fadeInLeftBig animate__slower ">{{ $store.state.home[0].intro }}</p>
+    <p class="card-text fs-4 entry-summary animate__animated animate__fadeInUpBig animate__slower ">{{ $store.state.home[0].subintro }}</p>
+    <p class="card-text">
+      <button onclick="window.location.href='/contact'" class="box animate__animated animate__fadeInUpBig animate__slower">
+    Contact Me!
+</button>
 
-    <section class="cards-home overflow-hidden py-3 py-md-5 py-xl-8 overflow-hidden d-flex justify-content-center align-items-center h-100 bg-transparent">
-     <div class="container">
-       <div class="row gy-4 gy-lg-0 ">
-         <div class="col-12 col-lg-6 ">
-             <div class="card border-0 ">
-               <img class="card-img-top img-fluid m-0 animate__animated animate__fadeInDownBig animate__slower " loading="lazy" :src=$store.state.home[0].image alt="Me">
-               <div class="card-body  p-4 ">
-                 <div class="entry-header border-0   ">
-                   <h2 class="card-title entry-title mb-0 text-uppercase animate__animated animate__fadeInLeftBig animate__slower  ">{{$store.state.home[0].intro  }}</h2>
-                   <h6 class="card-title entry-title mb-0 animate__animated animate__fadeInRightBig animate__slower">{{ $store.state.home[0].title }}</h6>
-                 </div>
-                 <p class="card-text entry-summary animate__animated animate__fadeInUpBig animate__slower ">{{ $store.state.home[0].subintro }}</p>
-                 <p class="card-text">
-                 <a href="https://github.com/niyaazdaniels" target="_blank"><i class="fa-brands fa-github animate__animated animate__rotateIn animate__slower"></i></a>
-                 <a href="https://twitter.com/daniels_niyaaz" target="_blank"><i class="fa-brands fa-twitter animate__animated animate__rotateIn animate__slower "></i></a>
-                 <a href="https://www.linkedin.com/in/niyaaz-daniels-6694a7129/" target="_blank"><i class="fa-brands fa-linkedin animate__animated animate__rotateIn animate__slower "></i></a>
-                 </p>
-                 <a href="https://drive.google.com/file/d/1VhXma-9eHWEU0Y9tS-DScq7nccc9UCsZ/view?usp=drive_link" target="_blank"><button class="btn  animate__animated animate__slideInUp animate__slower" id="btn"><i class="fa-solid fa-arrow-right-long"></i>Resume<i class="fa-solid fa-arrow-left-long"></i></button></a>
-                     </div> 
-               </div>
-             </div>
-         </div>
-       </div>
-   </section>
-  </div>
+    </p>
+</div>
+</div>
 </template>
 <script>
 
-
 export default {
-methods: {
-},
-fetchHome(){
- return this.$store.dispatch('fetchHome')
-},
-mounted(){
-this.fetchHome
-}
+  methods: {
+  },
+  fetchHome(){
+    return this.$store.dispatch('fetchHome')
+  },
+  mounted(){
+    this.fetchHome
+  }
 }
 </script>
 <style scoped>
+
 img {
-  width: 250px;
-  height: 100%;
+  width: 500px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  left: 170px;
 }
-i {
-color: black;
-padding: 7px;
-border-radius: 45%;
-
-}
-i:hover{
-  transition: all .5s ease-in-out;
-  box-shadow: 0px 0px 10px black;
-  background: #F1B24A;
-} 
 #btn{
   padding: 1px;
   border-radius: 5%;
@@ -72,68 +47,110 @@ i:hover{
   box-shadow: 0px 0px 10px #333333;
   outline: none;
 }
-.plus{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 100vh;
-  position: relative;
-}
 .card{
   background-color: transparent;
   color: #FFFFFF;
-  width: 600px;
+  top: 200px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+h5 {
+  color: #F1B24A;
+  letter-spacing: 10px;
+
+}
+.box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
 @media (max-width:400px) {
   .plus{
     display: flex;
     flex-direction: column;
     position: relative;
-    left: -162px !important;
   }
   .container{
     width: 151vw !important;
   }
 img{
-  width: 150px;
+  width: 280px;
   height: auto;
   position: relative;
-  left: 230px;
 }
-h2 {
+h5{
   font-size: 16px;
-}
-h6{
-  font-size: 12px;
 }
 p{
   font-size: 10px;
+  font-weight: light;
 }
 }
-@media (max-width:525px) {
-  .plus{
-    position: relative;
-    left: -50px;
-    display: flex;
-  }
-  .container{
-    width: 100vw ;
-  }
-img{
-  width: 150px;
-  height: auto;
-  position: relative;
-  left: 230px;
-}
-h2 {
-  font-size: 16px;
-}
-h6{
-  font-size: 12px;
-}
-p{
-  font-size: 10px;
-} 
-}
+
 </style>

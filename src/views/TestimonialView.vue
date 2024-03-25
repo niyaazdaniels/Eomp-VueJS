@@ -1,13 +1,13 @@
 <template>
-<div class="container">
-    <h2 class="heading animate__animated animate__fadeInDownBig text-uppercase fw-semibold">Testimonials</h2>
-    <div class="cards" >
+  <div class="container-fluid d-flex justify-content-center align-items-center h-50 flex-column overflow-hidden">
+    <h2 class="heading animate__animated animate__fadeInDownBig text-uppercase fw-semibold overflow-hidden">Testimonials</h2>
+      <div class="cards" >
         <div class="card overflow-hidden" v-for="testimonial in $store.state.testimonials" :key="testimonial">
-            <div>
-                <div class="image animate__animated animate__fadeInUpBig animate__slower "><img :src=testimonial.image></div>   
-                <h3 class="card-title animate__animated animate__fadeInUpBig animate__slow">{{testimonial.name}}</h3>
-                <h3 class="card-title animate__animated animate__fadeInUpBig animate__slow">{{testimonial.surname}}</h3>
-                <div class="card-content animate__animated animate__fadeInUpBig ">
+          <div>
+             <div class="image animate__animated animate__fadeInUpBig animate__slower overflow-hidden "><img :src=testimonial.image></div>   
+                <h3 class="card-title fs-5 animate__animated animate__fadeInUpBig animate__slow">{{testimonial.name}}</h3>
+                  <h3 class="card-title fs-5 animate__animated animate__fadeInUpBig animate__slow">{{testimonial.surname}}</h3>
+                     <div class="card-content fs-6 animate__animated animate__fadeInUpBig ">
                     <p>{{testimonial.testimonial}}</p>
                 </div>
             </div>
@@ -23,18 +23,19 @@ export default {
 </script>
 
 <style scoped>
-.container {
-    max-width: 1600px;
+.container-fluid {
+    max-width: 100vw;
+    height: 100vh;
     padding: 0px 30px;
     margin: 0 auto;
     top: 100px;
     position: relative;
 }
 h2 {
-    font-size: 24px;
+    font-size: 45px;
     margin-bottom: 1em;
-    text-decoration-line: underline;
     color: #F1b24a;
+    letter-spacing: 5px;
 }
 .cards {
     display: flex;
@@ -43,6 +44,8 @@ h2 {
     overflow-x: scroll;
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
+    overflow-y: hidden ;
+    height: 55vh;
 }
 .card {
     display: flex;
@@ -56,24 +59,28 @@ h2 {
     border: none;
 }
 .card:hover{
-    transform: scale(1.1);
     transition: all .4s ease-in-out;
 }
 
 .card .card-title {
     font-size: 1.1rem;
     text-transform: uppercase;
+    color: #F1b24a;
 }
 
 .card .card-content {
     margin: 10px 0;
     max-width: 90%;
     margin-left: 15px;
-    font-size: 12px;
+    font-size: 12px;   
 }
 
 img{
-    height: 90px;
+    height: 150px;
+}
+.cards::-webkit-scrollbar {
+    height: 12px;
+    border-radius: 30px;
 }
 
 @media (min-width: 500px) {

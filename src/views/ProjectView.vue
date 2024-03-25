@@ -1,24 +1,25 @@
 <template>
- <div class="container d-flex flex-column" v-if="$store.state.projects.length > 0" >
-    <h2 class="heading text-uppercase animate__animated animate__fadeInDownBig animate__slow fw-semibold text-decoration-underline">Projects</h2>
-    <div class="cards">
-        <div class="card " v-for="project in $store.state.projects" :key="project">
-            <div>
-                <div class="image animate__animated animate__fadeInUpBig"><img :src=project.image></div>   
-                <div class="card-body">
-        <h5 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{project.name}}</h5>
-        <p class="card-text animate__animated animate__fadeInUpBig animate__slow">{{project.description }}</p>
-        <a :href= project.gitHub class="btn animate__animated animate__fadeInUpBig animate__slower " target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a :href="project.hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
-      </div>
+    <div class="container d-flex flex-column" v-if="$store.state.projects.length > 0">
+      <h1 class="heading text-uppercase animate__animated animate__fadeInDownBig animate__slow fw-semibold">Projects</h1>
+      <div class="cards container-fluid m-0">
+        <div class="card container-fluid"  v-for="project in $store.state.projects" :key="project">
+          <div>
+            <div class="image animate__animated animate__fadeInUpBig"><img :src="project.image"></div>
+            <div class="card-body">
+              <h5 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{ project.name }}</h5>
+              <p class="card-text fs-6 animate__animated animate__fadeInUpBig animate__slow">{{ project.description }}</p>
+              <a :href="project.gitHub" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a :href="project.hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
             </div>
           </div>
         </div>
-</div>
-<div v-else>
-  <SpinnerView/>
-</div>
-</template>
+      </div>
+    </div>
+    <div v-else>
+      <SpinnerView/>
+    </div>
+  </template>
+  
 
 <script>
 import SpinnerView from '@/components/SpinnerView.vue';
@@ -28,16 +29,18 @@ export default {
 </script>
 
 <style scoped>
-h2{
-  font-size:28px;
+h1{
   color: #f1b24a;
+  letter-spacing: 5px;
+  font-size: 45px;
+  margin-bottom: 50px;
 }
 .container {
-    max-width: 1500px;
-    padding: 0 10px;
+    max-width: 100vw;
+    padding: 20px 30px;
     margin: 0 auto;
     top: 180px;
-    height: 300px;
+    height: 100vh;
     position: relative;
     height: max-content;
 }
@@ -54,7 +57,8 @@ h2{
     display: flex;
     flex-direction: column;
     flex: 0 0 100%;
-    padding: 10px;
+    padding: 20px;
+    height: 450px;
     background: linear-gradient(90deg, #4D774E, #164A41);
     border-radius: 5px;
     transition: all 0.4s;
@@ -62,15 +66,17 @@ h2{
     border: none;
     color: #FFFFFF;
 }
+
 .card:hover{
   transform: scale(1.1);
-  box-shadow: 0px 0px 8px white;
 }
 .card .card-title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+  color: #f1b24a;
+
 }
 .card .card-content {
-    margin: 10px 0;
+    margin: 20px 0;
     max-width: 90%;
     margin-left: 15px;
 }
@@ -79,18 +85,28 @@ h2{
     border-radius: 30px;
 }
 img{
-    height: 80px;
+    height: 100px;
+    border-radius: 15%;
+    filter: grayscale(100);
+}
+img:hover{
+    filter: grayscale(0);
+
+    transition: ease-in 1s;
 }
 i {
 color: black;
 padding: 7px;
-border-radius: 45%;
+border-radius: 15%;
+margin-top: 15px;
+font-size: 1.5rem;
 
 }
 i:hover{
   transition: all .5s ease-in-out;
-  box-shadow: 0px 0px 10px black;
-  background: #e74c3c;
+  box-shadow: 0px 0px 12px white;
+  color: #f1b24a;
+
 } 
 
 @media (min-width: 500px) {

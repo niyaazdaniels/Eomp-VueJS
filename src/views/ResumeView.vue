@@ -1,6 +1,5 @@
 <template>
    <article class="resume-wrapper text-center position-relative overflow-hidden">
-
 <div class="resume-wrapper-inner mx-auto text-start">
   <header class="resume-header pt-4 pt-md-0">
     <div class="row">
@@ -9,6 +8,7 @@
           <img :src=$store.state.home[0].image>
         </div>
       </div>
+
       <div class="col">
         <div class="row p-4 justify-content-center justify-content-md-between">
           <div class="primary-info col-auto">
@@ -21,10 +21,10 @@
             </ul>
           </div>
         </div>
-        
       </div>
     </div>
   </header>
+
   <div class="resume-body p-5"> 
     <section class="resume-section summary-section mb-5">
       <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3 animate__animated animate__fadeInLeftBig animate__slower fw-semibold">{{ $store.state.about[0].heading2 }}</h2>
@@ -32,6 +32,7 @@
         <p class="mb-0 text-reset text-link animate__animated animate__fadeInLeftBig animate__slower">{{ $store.state.about[0].experience }}</p>
       </div>
     </section>
+
     <div class="row">
       <div class="col-lg-9">
         <section class="resume-section experience-section mb-5"  v-for="exp in $store.state.experience" :key="exp">
@@ -51,6 +52,7 @@
           </div>
         </section>
       </div>
+
       <div class="col-lg-3">
         <section class="resume-section skills-section mb-5">
           <h2 class="resume-section-title fw-semibold pb-3 mb-3 animate__animated animate__fadeInRightBig animate__slower ">{{ $store.state.about[0].subheading2 }}</h2>
@@ -62,8 +64,8 @@
                   </li>
                 </ul>
               </div>
-             
           </div>
+
         </section>
         <section class="resume-section education-section mb-5">
           <h2 class="resume-section-title fw-semibold pb-3 mb-3 animate__animated animate__fadeInRightBig animate__slower">{{ $store.state.about[0].subheading3 }}</h2>
@@ -87,6 +89,7 @@
             </ul>
           </div>
         </section>
+        
         <section class="resume-section interests-section mb-5">
           <h2 class="resume-section-title fw-semibold pb-3 mb-3 animate__animated animate__fadeInRightBig animate__slower">{{$store.state.about[0].subheading1}}</h2>
           <div class="resume-section-content " v-for="hobbie in $store.state.about" :key="hobbie">

@@ -55,7 +55,7 @@ img {
 .card{
   background-color: transparent;
   color: #FFFFFF;
-  top: 200px;
+  top: 100px;
 }
 
 a {

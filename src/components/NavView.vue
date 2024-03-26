@@ -36,7 +36,7 @@ nav a{
     text-decoration: none;
     color: white;
     padding-left: 10px;
-    font-weight: 600;
+    font-weight: 400;
     margin-right: 0px;
     font-size: 1rem;
     letter-spacing: 7px;

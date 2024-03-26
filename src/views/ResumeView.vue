@@ -136,9 +136,12 @@ i {
 .resume-position-title{
  color:  #F1B24A;
  border-bottom: 3px solid #F1B24A;
+ font-weight: 300;
+
 }
 .resume-section-content{
   color: #FFFFFF;
+  font-weight: 300;
 }
 .resume-wrapper{
 font-family: 'Montserrat', sans-serif;

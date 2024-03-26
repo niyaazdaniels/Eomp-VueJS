@@ -73,8 +73,8 @@ nav a.router-link-exact-active {
   color:   #F1B24A;
 }
 body{
-  background: linear-gradient(90deg,#164A41,#4D774E, #68a054) ;
-  animation: gradient 10s ease-in-out infinite;
+  background: linear-gradient(90deg,#164A41,#4D774E, #86bd72) ;
+  /* animation: gradient 10s ease-in-out infinite; */
   background-size: 200% 200%;
   color: #FFFFFF;
   overflow-x: hidden;

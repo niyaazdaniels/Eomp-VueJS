@@ -15,8 +15,10 @@
             <h1 class="title mb-3 animate__animated animate__backInDown animate__slower text-uppercase fw-bold">{{ $store.state.about[0].name }}</h1>
             <div class="title mb-3 animate__animated animate__fadeInRightBig animate__slower text-uppercase fw-semibold">{{ $store.state.about[0].title }}</div>
             <ul class="list-unstyled">
-              <li><div class="text-link text-black animate__animated animate__fadeInRightBig animate__slower"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-6"></i> {{ $store.state.about[0].email }}</div></li>
-              <li><div class="text-link text-black animate__animated animate__fadeInRightBig animate__slower"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"> </i>{{ $store.state.about[0].cell }}
+              <li><div class="text-link text-black animate__animated animate__fadeInRightBig animate__slow"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-6"></i> {{ $store.state.about[0].email }}</div></li>
+              <li><div class="text-link text-black animate__animated animate__fadeInRightBig animate__slow"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"> </i>{{ $store.state.about[0].cell }}
+                <li><div class="text-link text-black animate__animated animate__fadeInRightBig animate__slower"><i class="fa-solid fa-location-dot" data-fa-transform="grow-6"></i> {{ $store.state.about[0].suburb }}</div></li>
+                <li><div class="text-link text-black animate__animated animate__fadeInRightBig animate__slower"><i class="fa-regular fa-calendar" data-fa-transform="grow-6"></i> {{ $store.state.about[0].dob }}</div></li>
               </div></li>
             </ul>
           </div>
@@ -104,18 +106,22 @@
     </div>
   </div>
 </div>
+<Footer/>
 </article> 
 </template>
 
 <script>
+import Footer from '../components/FooterView.vue'
 export default {
-
+components: {
+  Footer
+}
 }
 </script>
 
 <style scoped>
 .resume-wrapper{
-  top: 50px;
+  top: 80px;
 }
 img{
   height: 250px;

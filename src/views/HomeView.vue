@@ -1,11 +1,11 @@
 <template>
   <div class="card container-fluid d-flex align-items-center border-0 overflow-hidden h-100">
-  <img :src=$store.state.home[0].image class="card-img-top animate__animated animate__fadeInDownBig animate__slower  " alt="me">
+  <img :src=$store.state.home[0].image class="card-img-top animate__animated animate__fadeInDownBig animate__slower" alt="me">
   <div class="card-body">
-    <h5 class="card-title fs-1 fw-semibold animate__animated animate__fadeInRightBig animate__slower text-uppercase ">{{ $store.state.home[0].title }}</h5>
-    <p class="card-text fs-3 animate__animated animate__fadeInLeftBig animate__slower ">{{ $store.state.home[0].intro }}</p>
-    <p class="card-text fs-4 entry-summary animate__animated animate__fadeInUpBig animate__slower ">{{ $store.state.home[0].subintro }}</p>
-    <p class="card-text">
+    <h5 class="card-title fs-1 fst-italic fw-semibold animate__animated animate__fadeInRightBig animate__slower text-uppercase ">{{ $store.state.home[0].title }}</h5>
+    <p class="card-text fs-3 fw-light animate__animated animate__fadeInLeftBig animate__slower ">{{ $store.state.home[0].intro }}</p>
+    <p class="card-text fs-6 fw-light entry-summary animate__animated animate__fadeInUpBig animate__slower ">{{ $store.state.home[0].subintro }}</p>
+    <p class="card-text button d-flex justify-content-center ">
       <button onclick="window.location.href='/contact'" class="box animate__animated animate__fadeInUpBig animate__slower">
     Contact Me!
 </button>
@@ -13,10 +13,15 @@
     </p>
 </div>
 </div>
+<Footer/>
 </template>
 <script>
 
+import Footer from '../components/FooterView.vue'
 export default {
+  components: {
+    Footer
+  },
   methods: {
   },
   fetchHome(){
@@ -30,21 +35,21 @@ export default {
 <style scoped>
 
 img {
-  width: 500px;
+  max-width: 400px;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  border-radius: 0px;
 }
 #btn{
   padding: 1px;
-  border-radius: 5%;
 }
 #btn:hover{
   color: #F1B24A;
   transition: all .5s ease-in-out;
-  box-shadow: 0px 0px 10px #333333;
+  box-shadow: 0px 0px 10px #F1B24A;
   outline: none;
 }
 .card{
@@ -105,42 +110,35 @@ h5 {
 }
 
 .box:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px #F1B24A;
 }
 
 .box:hover:before {
-  border-color: #262626;
+  border-color: #F1B24A;
   height: 100%;
   transform: translateX(0);
-  transition: .3s transform linear, .3s height linear .3s;
+  transition: .4s transform linear, .4s height linear .4s;
 }
 
 .box:hover:after {
-  border-color: #262626;
+  border-color: #F1B24A;
   height: 100%;
   transform: translateX(0);
-  transition: .3s transform linear, .3s height linear .5s;
+  transition: .4s transform linear, .4s height linear .5s;
 }
 
 button {
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
   outline: none;
   border: none;
   background: transparent;
 }
+
 @media (max-width:400px) {
-  .plus{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .container{
-    width: 151vw !important;
-  }
 img{
-  width: 280px;
+  width: 290px;
   height: auto;
   position: relative;
 }
@@ -152,5 +150,6 @@ p{
   font-weight: light;
 }
 }
+
 
 </style>

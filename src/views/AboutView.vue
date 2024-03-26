@@ -1,28 +1,28 @@
 <template>
   <section class="about-section">
-  <div class="container-fluid d-flex justify-content-center align-items-center flex-column ">
-    <h1 class="text-heading fw-semibold text-uppercase mb-5">About Me</h1>
-  <div class="container">
-    <div class="card text-center animate__animated animate__bounceIn">
-      <div class="row g-0">
+    <div class="container-fluid d-flex justify-content-center align-items-center flex-column ">
+      <div class="container row d-flex flex-column justify-content-center align-content-center">
+        <div class="card text-center animate__animated animate__bounceIn">
+          <div class="row g-0">
         <div class="col-lg-4">
           <img :src="$store.state.home[0].image" class="img-fluid rounded-start">
         </div>
         <div class="col-lg-8">
           <div class="card-body overflow-hidden">
+            <h1 class="text-heading fw-semibold text-uppercase">About</h1>
             <h1 class="card-title display-4 animate__animated animate__fadeInRightBig animate__slow text-uppercase fw-bold">{{ $store.state.about[0].name }}</h1>
             <p class="card-text animate__animated animate__fadeInRightBig animate__slower">{{ $store.state.about[0].description }}</p>
             <p class="card-text">
-     <a href="https://github.com/niyaazdaniels" target="_blank"><i class="fa-brands fa-github animate__animated animate__rotateIn animate__slower"></i></a>
-    <a href="https://twitter.com/daniels_niyaaz" target="_blank"><i class="fa-brands fa-twitter animate__animated animate__rotateIn animate__slower "></i></a>
-  <a href="https://www.linkedin.com/in/niyaaz-daniels-6694a7129/" target="_blank"><i class="fa-brands fa-linkedin animate__animated animate__rotateIn animate__slower "></i></a>
-  </p>
-  <a href="https://drive.google.com/uc?export=download&id=1VhXma-9eHWEU0Y9tS-DScq7nccc9UCsZ" class="button animate__animated animate__slideInUp animate__slower" target="_blank">
-    <span class="button_lg">
-        <span class="button_sl"></span>
-        <span class="button_text">Download Resume</span>
-    </span>
-</a>
+            <a href="https://github.com/niyaazdaniels" target="_blank"><i class="fa-brands fa-github animate__animated animate__rotateIn animate__slower"></i></a>
+          <a href="https://twitter.com/daniels_niyaaz" target="_blank"><i class="fa-brands fa-twitter animate__animated animate__rotateIn animate__slower "></i></a>
+        <a href="https://www.linkedin.com/in/niyaaz-daniels-6694a7129/" target="_blank"><i class="fa-brands fa-linkedin animate__animated animate__rotateIn animate__slower "></i></a>
+      </p>
+       <a href="https://drive.google.com/uc?export=download&id=1VhXma-9eHWEU0Y9tS-DScq7nccc9UCsZ" class="button animate__animated animate__slideInUp animate__slower" target="_blank">
+        <span class="button_lg">
+         <span class="button_sl"></span>
+          <span class="button_text">Download Resume</span>
+          </span>
+          </a>
           </div>
         </div>
       </div>
@@ -30,29 +30,33 @@
   </div>
 </div>
 </section>
-
+<Footer/>
 </template>
 
 <script>
+import Footer from "../components/FooterView.vue"
 export default {
-  
+  components: {
+    Footer
+  }
 }
 </script>
 
 <style scoped>
+
 .about-section{
   min-height: 100vh;
 }
 
 .card{
-
 text-align: center;
-padding: 20px;
+padding: 30px;
 background: #164A41;
 color: #FFFFFF;
 border: none;
 border-radius: 0px;
 box-shadow: 15px 12px 12px #164A41;
+min-width: 90vw;
 }
 a {
   text-decoration: none;
@@ -69,12 +73,14 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65vh;
+  height: 90vh;
+  min-width: 100vw;
+  padding: 0;
 }
 i {
 color: black;
-padding: 10px;
-border-radius: 25%;
+padding: 15px;
+border-radius: 15%;
 margin-right: 10px;
 margin-top: 10px ;
 font-size: 1.3rem;
@@ -82,7 +88,7 @@ font-size: 1.3rem;
 }
 i:hover{
   transition: all .5s ease-in-out;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 7px white;
   background: #F1B24A;
 }
   .button {
@@ -168,9 +174,39 @@ i:hover{
     height: 35vh;
   }
 }
+@media (max-width: 991px) {
+  .container-fluid{
+    top: 100px;
+    position: relative;
+  }
+}
 @media (max-width: 768px){
   .container{
     height: 30vh;
   }
 }
+@media (max-width: 470px){
+  p {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .card-body p {
+    font-size: 10px;
+  }
+  .card-body h1 {
+    font-size: 12px;
+  }
+  .card-body i {
+    font-size: 10px;
+  }
+  .card-body .button_text {
+    font-size: 10px;
+  }
+}
+
 </style>

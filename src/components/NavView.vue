@@ -36,10 +36,10 @@ nav a{
     text-decoration: none;
     color: white;
     padding-left: 10px;
+    font-weight: 600;
     margin-right: 0px;
     font-size: 1rem;
-}
-nav{
-    letter-spacing: 1px;
+    letter-spacing: 7px;
+
 }
 </style>

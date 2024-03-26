@@ -47,15 +47,15 @@ h2 {
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
     overflow-y: hidden ;
-    height: 50vh;
+    height: 60vh;
     width: 95vw;
 }
 .card {
-    margin-right: 20px;
+    margin-right: 15px;
     display: flex;
     flex-direction: column;
     flex: 0 0 100%;
-    padding: 10px;
+    padding: 20px;
     color: #FFFFFF;
     background: #174c25;
     transition: all 0.6s;
@@ -87,7 +87,20 @@ img{
 .cards::-webkit-scrollbar {
     height: 12px;
     border-radius: 30px;
+    color: #000;
 }
+.cards::-webkit-scrollbar {
+  width: 12px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background-color: #174c25;
+}
+
+.cards::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
 
 @media (min-width: 500px) {
     .card {

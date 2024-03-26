@@ -110,6 +110,19 @@ i:hover{
   color: #f1b24a;
 
 } 
+.cards::-webkit-scrollbar {
+  width: 12px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #4D774E, #164A41);
+
+}
+
+.cards::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
 
 @media (min-width: 500px) {
     .card {

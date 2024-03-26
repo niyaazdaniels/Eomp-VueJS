@@ -31,17 +31,17 @@ export default {
 </script>
 
 <style scoped>
-h1{
+.heading{
   color: #f1b24a;
   letter-spacing: 5px;
-  font-size: 45px;
-  margin-bottom: 50px;
+  font-size: 35px;
+  margin-bottom: 100px;
 }
 .container {
     max-width: 100vw;
     padding: 20px 30px;
     margin: 0 auto;
-    top: 180px;
+    top: 100px;
     height: 100vh;
     position: relative;
     height: max-content;

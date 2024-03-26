@@ -5,9 +5,9 @@
         <div class="card overflow-hidden" v-for="testimonial in $store.state.testimonials" :key="testimonial">
           <div>
              <div class="image animate__animated animate__fadeInUpBig animate__slower overflow-hidden "><img :src=testimonial.image></div>   
-                <h3 class="card-title fs-5 animate__animated animate__fadeInUpBig animate__slow">{{testimonial.name}} {{testimonial.surname}}</h3>
-                  <h3 class="card-title fs-5 animate__animated animate__fadeInUpBig animate__slow"></h3>
-                    <p>{{testimonial.testimonial}}</p>
+                <h3 class="card-title fs-5 animate__animated animate__fadeInUpBig animate__slower">{{testimonial.name}} {{testimonial.surname}}</h3>
+                  <h3 class="card-title fs-6 animate__animated animate__fadeInUpBig animate__slower"></h3>
+                    <p class="fs-6 fw-lighter animate__animated animate__fadeInUpBig animate__slower">{{testimonial.testimonial}}</p>
                 </div>
             </div>
         </div>
@@ -34,8 +34,8 @@ components: { Footer }
 }
 h2 {
     font-size: 35px;
-    margin-bottom: 1em;
-    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-top: 1em;
     color: #F1b24a;
     letter-spacing: 5px;
 }
@@ -71,7 +71,7 @@ h2 {
     font-size: 1.1rem;
     text-transform: uppercase;
     color: #F1b24a;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .card .card-content {

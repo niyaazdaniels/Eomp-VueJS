@@ -35,7 +35,7 @@ export default {
 <style scoped>
 
 img {
-  max-width: 400px;
+  max-width: 350px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -135,7 +135,18 @@ button {
   border: none;
   background: transparent;
 }
-
+@media(max-width: 1024px){
+  img {
+    height: 200px;
+    width: auto;
+  }
+}
+@media (max-width: 540px) {
+  img {
+    height: 300px;
+    width: auto ;
+  }
+}
 @media (max-width:400px) {
 img{
   width: 290px;
@@ -149,6 +160,19 @@ p{
   font-size: 10px;
   font-weight: light;
 }
+
+}
+@media (max-width: 375px) {
+  img {
+    height: 200px;
+    width: auto;
+  }
+  h5 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 12px;
+  }
 }
 
 

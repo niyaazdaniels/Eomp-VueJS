@@ -174,15 +174,86 @@ i:hover{
     height: 35vh;
   }
 }
+@media (max-width: 1280px) {
+.card {
+  margin-top: 50px;
+}
+}
+@media (max-width: 1024px) {
+  img {
+    height: 300px;
+  }
+  h1 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .card{
+    margin-top: 80px
+  }
+  i {
+    font-size: 15px;
+    margin: 0;
+  }
+  .card-text {
+    margin: 0;
+  }
+  
+}
 @media (max-width: 991px) {
-  .container-fluid{
-    top: 100px;
-    position: relative;
+ 
+}
+@media (max-width: 853px) {
+  img {
+    height: 400px;
+  }
+  .card {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 820px) {
+  img {
+    height: 300px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .card {
+    margin-bottom: 70px;
   }
 }
 @media (max-width: 768px){
-  .container{
-    height: 30vh;
+ img {
+  height: 300px;
+ }
+ p {
+  font-size: 12px;
+ }
+ .card {
+  margin-bottom: 70px;
+ }
+}
+@media (max-width: 540px) {
+  img {
+    height: 150px;
+  }
+  h1 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 10px;
+  }
+  i {
+    font-size: 10px;
+    margin: 0;
+  }
+  .card-text {
+    margin: 0;
+  }
+  .card {
+    margin-bottom: 10px;
+    margin-top: 80px;
   }
 }
 @media (max-width: 470px){
@@ -191,6 +262,77 @@ i:hover{
   }
   h1 {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  img{
+    height: 200px;
+  }
+  p {
+    font-size: 8px;
+  }
+  i {
+    font-size: 12px;
+  }
+  .card {
+    margin-bottom: 100px;
+    margin-top: 100px ;
+  }
+}
+@media (max-width: 414px) {
+  img{ 
+    height: 200px;
+  }
+  h1 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 8px;
+  }
+  span.button_lg{
+    font-size: 12px;
+  }
+  i {
+    font-size: 12px;
+  }
+  .card{
+    padding: 20px;
+    margin-top: 200px;
+  }
+  .card-text {
+    margin: 0;
+  }
+}
+@media (max-width: 375px){
+img {
+  height: 100px;
+}
+h1 {
+  font-size: 10px;
+}
+p {
+  font-size: 8px;
+}
+i {
+  font-size: 8px;
+}
+span.button_lg {
+  font-size: 8px;
+}
+.card {
+  margin-top: 180px;
+}
+.about-section {
+  min-height: 80vh;
+}
+.card-text {
+  margin: 0;
+}
+}
+@media (max-width: 360px){
+  .card-text {
+    margin: 0;
   }
 }
 
@@ -206,6 +348,11 @@ i:hover{
   }
   .card-body .button_text {
     font-size: 10px;
+  }
+}
+@media (max-width: 280px) {
+  p {
+    font-size: 5px;
   }
 }
 

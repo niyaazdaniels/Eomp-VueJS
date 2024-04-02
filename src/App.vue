@@ -74,14 +74,14 @@ nav a.router-link-exact-active {
 }
 body{
   background: linear-gradient(90deg,#164A41,#4D774E, #86bd72) ;
-  /* animation: gradient 10s ease-in-out infinite; */
-  background-size: 200% 200%;
+  background-size: 200% 100%;
   color: #FFFFFF;
   overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {
   display: none;
+  margin-top: 130px;
 }
 html {
   -ms-overflow-style: none;  

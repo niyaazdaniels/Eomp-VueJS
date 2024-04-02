@@ -7,7 +7,7 @@
              <div class="image animate__animated animate__fadeInUpBig animate__slower overflow-hidden "><img :src=testimonial.image></div>   
                 <h3 class="card-title fs-5 animate__animated animate__fadeInUpBig animate__slower">{{testimonial.name}} {{testimonial.surname}}</h3>
                   <h3 class="card-title fs-6 animate__animated animate__fadeInUpBig animate__slower"></h3>
-                    <p class="fs-6 fw-lighter animate__animated animate__fadeInUpBig animate__slower">{{testimonial.testimonial}}</p>
+                    <p class="fw-lighter animate__animated animate__fadeInUpBig animate__slower">{{testimonial.testimonial}}</p>
                 </div>
             </div>
         </div>
@@ -33,21 +33,21 @@ components: { Footer }
     position: relative;
 }
 h2 {
-    font-size: 35px;
-    margin-bottom: 2em;
+    font-size: 30px;
+    margin-bottom: 1em;
     margin-top: 1em;
     color: #F1b24a;
     letter-spacing: 5px;
 }
 .cards {
     display: flex;
-    padding: 20px 0px;
+    padding: 15px 0px;
     list-style: none;
     overflow-x: scroll;
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
     overflow-y: hidden ;
-    height: 60vh;
+    height: 65vh;
     width: 95vw;
 }
 .card {
@@ -60,6 +60,8 @@ h2 {
     background: #174c25;
     transition: all 0.6s;
     border: none;
+    margin-bottom: 15px;
+
 }
 .card:hover{
     transition: all .4s ease-in-out;
@@ -82,7 +84,7 @@ h2 {
 }
 
 img{
-    height: 180px;
+    height: 150px;
 }
 .cards::-webkit-scrollbar {
     height: 12px;
@@ -105,6 +107,7 @@ img{
 @media (min-width: 500px) {
     .card {
         flex-basis: calc(50% - 10px);
+        font-size: 12px;
     }
 
     .card:not(:last-child) {

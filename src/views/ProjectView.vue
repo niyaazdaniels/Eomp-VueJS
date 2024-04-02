@@ -35,7 +35,7 @@ export default {
   color: #f1b24a;
   letter-spacing: 5px;
   font-size: 35px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .container {
     max-width: 100vw;
@@ -53,10 +53,11 @@ export default {
     overflow-x: scroll;
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
-    overflow-y:hidden ;
-}
-.card {
+    overflow-y: hidden ;
+  }
+  .card {
     display: flex;
+    margin-bottom: 15px;
     flex-direction: column;
     flex: 0 0 100%;
     padding: 20px;

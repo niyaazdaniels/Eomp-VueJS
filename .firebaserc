@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "vueemop-e8788"
-  }
+    "default": "vueemop-e8788",
+    "part 2": "iamniyaazdaniels"
+  },
+  "targets": {},
+  "etags": {}
 }

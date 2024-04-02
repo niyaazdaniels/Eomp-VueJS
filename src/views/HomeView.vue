@@ -55,7 +55,7 @@ img {
 .card{
   background-color: transparent;
   color: #FFFFFF;
-  top: 100px;
+  top: 120px;
 }
 
 a {
@@ -135,15 +135,28 @@ button {
   border: none;
   background: transparent;
 }
+
+@media (max-width: 1280px) {
+  img {
+    height: 380px;
+    width: auto;
+  }
+}
 @media(max-width: 1024px){
   img {
-    height: 200px;
+    height: 350px;
+    width: auto;
+  }
+}
+@media (max-width: 853px){
+  img {
+    height: 450px;
     width: auto;
   }
 }
 @media (max-width: 540px) {
   img {
-    height: 300px;
+    height: 400px;
     width: auto ;
   }
 }
@@ -164,7 +177,7 @@ p{
 }
 @media (max-width: 375px) {
   img {
-    height: 200px;
+    height: 280px;
     width: auto;
   }
   h5 {
@@ -174,6 +187,7 @@ p{
     font-size: 12px;
   }
 }
+
 
 
 </style>

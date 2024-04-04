@@ -4,7 +4,7 @@
   <div class="card-body">
     <h5 class="card-title fs-1 fst-italic fw-semibold animate__animated animate__fadeInRightBig animate__slower text-uppercase ">{{ $store.state.home[0].title }}</h5>
     <p class="card-text fs-3 fw-light animate__animated animate__fadeInLeftBig animate__slower ">{{ $store.state.home[0].intro }}</p>
-    <p class="card-text fs-6 fw-light entry-summary animate__animated animate__fadeInUpBig animate__slower ">{{ $store.state.home[0].subintro }}</p>
+    <p class="card-text text-intro d-flex text-wrap fw-light entry-summary animate__animated animate__fadeInUpBig animate__slower ">{{ $store.state.home[0].subintro }}</p>
     <p class="card-text button d-flex justify-content-center ">
       <button onclick="window.location.href='/contact'" class="box animate__animated animate__fadeInUpBig animate__slower">
     Contact Me!
@@ -66,6 +66,13 @@ h5 {
   color: #F1B24A;
   letter-spacing: 10px;
 
+}
+.text-intro {
+  font-size: 12px;
+  max-width: 632px;
+  justify-content: center;
+  display: flex;
+  
 }
 .box {
   width: 140px;
@@ -150,7 +157,7 @@ button {
 }
 @media (max-width: 853px){
   img {
-    height: 450px;
+    height: 400px;
     width: auto;
   }
 }
@@ -162,7 +169,7 @@ button {
 }
 @media (max-width:400px) {
 img{
-  width: 290px;
+  width: 250px;
   height: auto;
   position: relative;
 }

@@ -6,10 +6,12 @@
           <div>
             <div class="image animate__animated animate__fadeInUpBig"><img :src="project.image"></div>
             <div class="card-body">
-              <h6 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{ project.name }}</h6>
-              <p class="card-text fs-6 animate__animated animate__fadeInUpBig animate__slow">{{ project.description }}</p>
-              <a :href="project.gitHub" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-brands fa-github"></i></a>
-              <a :href="project.hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
+              <h6 class="card-title animate__animated animate__fadeInUpBig animate__slow text-uppercase">{{ project.name }}</h6>
+              <p class="card-text fw-light mt-2 animate__animated animate__fadeInUpBig animate__slow">{{ project.description }}</p>
+              <div class="card-text position-relative bottom-0">
+                <a :href="project.gitHub" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a :href="project.hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -33,7 +35,7 @@ export default {
 <style scoped>
 .heading{
   color: #f1b24a;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
   font-size: 35px;
   margin-bottom: 50px;
 }
@@ -57,53 +59,47 @@ export default {
   }
   #project-card {
     display: flex;
-    margin-bottom: 15px;
     flex-direction: column;
     flex: 0 0 100%;
     padding: 20px;
     height: 450px;
     background: linear-gradient(90deg, #4D774E, #164A41);
-    border-radius: 5px;
-    transition: all 0.4s;
-    font-size: 12px;
+    transition: all 0.8s;
+    font-size: 14px;
     border: none;
     color: #FFFFFF;
+    margin-right: 15px;
+
 }
 
 #project-card:hover{
   transform: scale(1.1);
 }
 #project-card .card-title {
-    font-size: 1.2rem;
-  color: #f1b24a;
-
+    font-size: 0.8rem;
+    color: #f1b24a;
 }
 #project-card .card-content {
     margin: 20px 0;
     max-width: 90%;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 .cards::-webkit-scrollbar {
-    height: 12px;
-    border-radius: 30px;
+    height: 15px;
+    border-radius: 50%;
 }
 img{
-    height: 100px;
-    border-radius: 15%;
-    filter: grayscale(100);
-}
-img:hover{
-    filter: grayscale(0);
-
-    transition: ease-in 1s;
+    height: 110px;
 }
 i {
 color: black;
 padding: 7px;
 border-radius: 15%;
 margin-top: 15px;
-font-size: 1.5rem;
-
+font-size: 1.2rem;
+}
+p {
+  font-size: 12px;
 }
 i:hover{
   transition: all .5s ease-in-out;
@@ -124,12 +120,19 @@ i:hover{
   background-color: #f0f0f0;
 }
 
-
+@media (max-width: 360px) {
+  .cards {
+    margin-bottom: 1000px;
+  }
+}
 @media (min-width: 500px) {
+  p {
+  font-size: 10px;
+}
   #project-card {
         flex-basis: calc(50% - 10px);
+        
     }
-
     #project-card:not(:last-child) {
         margin-right: 20px;
     }

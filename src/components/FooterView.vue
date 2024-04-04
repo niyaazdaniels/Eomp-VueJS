@@ -28,5 +28,8 @@ footer{
 }
 span{
   color: #F1b24a;
+  font-style: italic;
+
+  font-weight: 300;
 }
 </style>

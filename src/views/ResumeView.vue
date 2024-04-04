@@ -29,7 +29,7 @@
 
   <div class="resume-body p-5"> 
     <section class="resume-section summary-section mb-5">
-      <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3 animate__animated animate__fadeInLeftBig animate__slower fw-semibold">{{ $store.state.about[0].heading2 }}</h2>
+      <h2 class="resume-section-title pb-3 mb-3 animate__animated animate__fadeInLeftBig animate__slower fw-semibold">{{ $store.state.about[0].heading2 }}</h2>
       <div class="resume-section-content">
         <p class="mb-0 text-reset text-link animate__animated animate__fadeInLeftBig animate__slower">{{ $store.state.about[0].experience }}</p>
       </div>
@@ -40,13 +40,13 @@
         <section class="resume-section experience-section mb-5"  v-for="exp in $store.state.experience" :key="exp">
           <h2 class="resume-section-title pb-3 mb-3 animate__animated animate__fadeInLeftBig animate__slower fw-semibold">{{ exp.title }}</h2>
           <div class="resume-position-time pb-2 animate__animated animate__fadeInLeftBig animate__slower">{{ exp.year }}</div>
-          <div class="resume-company-name ms-auto animate__animated animate__backInDown animate__slower">{{ exp.company }}</div>
+          <div class="resume-company-name fw-light ms-auto animate__animated animate__backInDown animate__slower">{{ exp.company }}</div>
           <div class="resume-section-content">
             <div class="resume-timeline position-relative">
               <article class="resume-timeline-item position-relative pb-5">
                 <div class="resume-timeline-item-header mb-2">
                   <div class="d-flex flex-column flex-md-row">
-                      <p class="resume-position mb-1 animate__animated animate__fadeInLeftBig animate__slower">{{ exp.description }}</p>
+                      <p class="resume-position fw-lighter mb-1 animate__animated animate__fadeInLeftBig animate__slower">{{ exp.description }}</p>
                   </div>
                 </div>
               </article>

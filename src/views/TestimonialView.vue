@@ -1,16 +1,13 @@
 <template>
   <div class="container-fluid d-flex justify-content-center align-items-center h-50 flex-column overflow-hidden">
-    <h2 class="heading animate__animated animate__fadeInDownBig text-uppercase fw-semibold overflow-hidden">Testimonials</h2>
+    <h2 class="heading animate__animated animate__fadeInDownBig text-uppercase fw-semibold overflow-hidden">Peer Reviews</h2>
       <div class="cards">
         <div class="card overflow-hidden" id="testimonial-card" v-for="testimonial in $store.state.testimonials" :key="testimonial">
           <div>
-             <div class="image animate__animated animate__fadeInUpBig animate__slower overflow-hidden "><img :src=testimonial.image></div>   
-                <h3 class="card-title fs-5 animate__animated animate__fadeInUpBig animate__slower">{{testimonial.name}} {{testimonial.surname}}</h3>
-                  <h3 class="card-title fs-6 animate__animated animate__fadeInUpBig animate__slower"></h3>
-                    <h6 class="fw-lighter animate__animated animate__fadeInUpBig animate__slower">{{testimonial.testimonial}}</h6>
-                    <div class="card-text col mt-3">
-                    <h6 class="fw-lighter animate__animated animate__fadeInUpBig animate__slower text-start" data-aos="zoom-in-up">Contact {{testimonial.contact}}</h6>
-                    </div>
+             <div class="image animate__animated animate__fadeInUpBig animate__slower overflow-hidden"><img :src=testimonial.image></div>   
+                <h3 class="card-title fs-5 animate__animated animate__fadeInUpBig animate__slower text-start">{{testimonial.name}} {{testimonial.surname}}</h3>
+                  <h3 class="card-title fs-6 animate__animated animate__fadeInUpBig animate__slower text-start"></h3>
+                    <h6 class="fw-lighter animate__animated animate__fadeInUpBig animate__slower text-start">{{testimonial.testimonial}}</h6>
                 </div>
             </div>
         </div>

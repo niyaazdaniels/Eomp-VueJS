@@ -2,11 +2,11 @@
     <div class="container d-flex flex-column" v-if="$store.state.projects.length > 0">
       <h1 class="heading text-uppercase animate__animated animate__fadeInDownBig animate__slow fw-semibold">Projects</h1>
       <div class="cards container-fluid m-0">
-        <div class="card container-fluid"  v-for="project in $store.state.projects" :key="project">
+        <div class="card container-fluid"  id="project-card"  v-for="project in $store.state.projects" :key="project">
           <div>
             <div class="image animate__animated animate__fadeInUpBig"><img :src="project.image"></div>
             <div class="card-body">
-              <h5 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{ project.name }}</h5>
+              <h6 class="card-title animate__animated animate__fadeInUpBig animate__slow fw-semibold text-uppercase">{{ project.name }}</h6>
               <p class="card-text fs-6 animate__animated animate__fadeInUpBig animate__slow">{{ project.description }}</p>
               <a :href="project.gitHub" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-brands fa-github"></i></a>
               <a :href="project.hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
@@ -55,7 +55,7 @@ export default {
     scroll-snap-type: x mandatory;
     overflow-y: hidden ;
   }
-  .card {
+  #project-card {
     display: flex;
     margin-bottom: 15px;
     flex-direction: column;
@@ -70,15 +70,15 @@ export default {
     color: #FFFFFF;
 }
 
-.card:hover{
+#project-card:hover{
   transform: scale(1.1);
 }
-.card .card-title {
+#project-card .card-title {
     font-size: 1.2rem;
   color: #f1b24a;
 
 }
-.card .card-content {
+#project-card .card-content {
     margin: 20px 0;
     max-width: 90%;
     margin-left: 15px;
@@ -126,31 +126,31 @@ i:hover{
 
 
 @media (min-width: 500px) {
-    .card {
+  #project-card {
         flex-basis: calc(50% - 10px);
     }
 
-    .card:not(:last-child) {
+    #project-card:not(:last-child) {
         margin-right: 20px;
     }
 }
 
 @media (min-width: 700px) {
-    .card {
+  #project-card {
         flex-basis: calc(calc(100% / 3) - 20px);
     }
 
-    .card:not(:last-child) {
+    #project-card:not(:last-child) {
         margin-right: 30px;
     }
 }
 
 @media (min-width: 1100px) {
-    .card {
+  #project-card {
         flex-basis: calc(25% - 30px);
     }
 
-    .card:not(:last-child) {
+    #project-card:not(:last-child) {
         margin-right: 40px;
     }
 }

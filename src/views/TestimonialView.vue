@@ -2,12 +2,15 @@
   <div class="container-fluid d-flex justify-content-center align-items-center h-50 flex-column overflow-hidden">
     <h2 class="heading animate__animated animate__fadeInDownBig text-uppercase fw-semibold overflow-hidden">Testimonials</h2>
       <div class="cards">
-        <div class="card overflow-hidden" v-for="testimonial in $store.state.testimonials" :key="testimonial">
+        <div class="card overflow-hidden" id="testimonial-card" v-for="testimonial in $store.state.testimonials" :key="testimonial">
           <div>
              <div class="image animate__animated animate__fadeInUpBig animate__slower overflow-hidden "><img :src=testimonial.image></div>   
                 <h3 class="card-title fs-5 animate__animated animate__fadeInUpBig animate__slower">{{testimonial.name}} {{testimonial.surname}}</h3>
                   <h3 class="card-title fs-6 animate__animated animate__fadeInUpBig animate__slower"></h3>
-                    <p class="fw-lighter animate__animated animate__fadeInUpBig animate__slower">{{testimonial.testimonial}}</p>
+                    <h6 class="fw-lighter animate__animated animate__fadeInUpBig animate__slower">{{testimonial.testimonial}}</h6>
+                    <div class="card-text col mt-3">
+                    <h6 class="fw-lighter animate__animated animate__fadeInUpBig animate__slower text-start" data-aos="zoom-in-up">Contact {{testimonial.contact}}</h6>
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,7 +53,7 @@ h2 {
     height: 65vh;
     width: 95vw;
 }
-.card {
+#testimonial-card {
     margin-right: 15px;
     display: flex;
     flex-direction: column;
@@ -63,20 +66,20 @@ h2 {
     margin-bottom: 15px;
 
 }
-.card:hover{
+#testimonial-card:hover{
     transition: all .4s ease-in-out;
     transform: scale(.9);
     box-shadow: 0px 0px 12px white;
 }
 
-.card .card-title {
+#testimonial-card .card-title {
     font-size: 1.1rem;
     text-transform: uppercase;
     color: #F1b24a;
     margin-top: 1rem;
 }
 
-.card .card-content {
+#testimonial-card .card-content {
     margin: 10px 0;
     max-width: 90%;
     margin-left: 15px;
@@ -105,32 +108,32 @@ img{
 
 
 @media (min-width: 500px) {
-    .card {
+    #testimonial-card {
         flex-basis: calc(50% - 10px);
         font-size: 12px;
     }
 
-    .card:not(:last-child) {
+    #testimonial-card:not(:last-child) {
         margin-right: 20px;
     }
 }
 
 @media (min-width: 700px) {
-    .card {
+    #testimonial-card {
         flex-basis: calc(calc(100% / 3) - 20px);
     }
 
-    .card:not(:last-child) {
+    #testimonial-card:not(:last-child) {
         margin-right: 30px;
     }
 }
 
 @media (min-width: 1100px) {
-    .card {
+    #testimonial-card {
         flex-basis: calc(25% - 30px);
     }
 
-    .card:not(:last-child) {
+    #testimonial-card:not(:last-child) {
         margin-right: 40px;
     }
 }

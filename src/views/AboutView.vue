@@ -202,7 +202,9 @@ i:hover{
   
 }
 @media (max-width: 991px) {
- 
+ .card {
+  margin-top: 40px;
+ }
 }
 @media (max-width: 853px) {
   img {
@@ -240,15 +242,6 @@ i:hover{
     margin-top: 80px;
   }
 }
-/* @media (max-width: 470px){
-  p {
-    font-size: 12px;
-  }
-  h1 {
-    font-size: 1rem;
-  }
-} */
-
 @media (max-width: 430px) {
   img{
     height: 180px;

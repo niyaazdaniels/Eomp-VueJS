@@ -120,13 +120,13 @@ i:hover{
   background-color: #f0f0f0;
 }
 
-@media (min-width: 300px) {
+@media (max-width: 300px) {
   #project-card {
-    height: 400px;
+    height: auto;
   }
   .heading {
     margin: 0;
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 @media (min-width: 500px) {
@@ -138,6 +138,9 @@ i:hover{
     }
     #project-card:not(:last-child) {
         margin-right: 20px;
+    }
+    .heading {
+      margin: 15px;
     }
 }
 

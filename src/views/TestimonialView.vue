@@ -102,7 +102,14 @@ img{
 .cards::-webkit-scrollbar-track {
   background-color: #f0f0f0;
 }
-
+@media (max-width: 360px) {
+    p {
+        font-size: 12px;
+    }
+    .heading {
+        font-size: 18px;
+    }
+}
 
 @media (min-width: 500px) {
     #testimonial-card {

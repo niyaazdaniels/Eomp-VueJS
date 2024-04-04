@@ -163,8 +163,11 @@ button {
 }
 @media (max-width: 540px) {
   img {
-    height: 400px;
+    height: 350px;
     width: auto ;
+  }
+  .card-text {
+    font-size: 12px;
   }
 }
 @media (max-width:400px) {

@@ -220,4 +220,25 @@ button:active {
   }
 }
 
+@media (max-width: 618px) {
+  .container-fluid{
+    top: 0;
+    position: relative;
+  }
+}
+@media (max-width: 375px) {
+  .heading-section {
+    font-size: 16px;
+  } 
+  p {
+    font-size: 12px;
+  }
+  .container-fluid{
+    height: auto;
+    top: 0;
+    position: relative;
+  }
+ 
+}
+
 </style>

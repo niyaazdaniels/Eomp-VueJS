@@ -24,6 +24,7 @@ footer{
     bottom: 0 !important; 
     text-transform: uppercase;
     width: 100%;
+    margin-top: 100px;
 
 }
 span{

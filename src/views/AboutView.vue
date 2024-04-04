@@ -73,7 +73,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 95vh;
   min-width: 100vw;
   padding: 0;
 }

@@ -35,7 +35,7 @@ export default {
 <style scoped>
 
 img {
-  max-width: 350px;
+  max-width: 320px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -55,7 +55,7 @@ img {
 .card{
   background-color: transparent;
   color: #FFFFFF;
-  top: 120px;
+  top: 110px;
 }
 
 a {

@@ -15,7 +15,7 @@
             <h1 class="title mb-3 animate__animated animate__backInDown animate__slower text-uppercase fw-bold">{{ $store.state.about[0].name }}</h1>
             <div class="title mb-3 animate__animated animate__fadeInRightBig animate__slower text-uppercase fw-semibold">{{ $store.state.about[0].title }}</div>
             <ul class="list-unstyled">
-              <li><div class="text-link text-black animate__animated animate__fadeInRightBig animate__slow"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-6"></i> {{ $store.state.about[0].email }}</div></li>
+              <li><div class="text-link text-black animate__animated animate__fadeInRightBig animate__slow"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-6"></i>{{ $store.state.about[0].email }}</div></li>
               <li><div class="text-link text-black animate__animated animate__fadeInRightBig animate__slow"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"> </i>{{ $store.state.about[0].cell }}
                 <li><div class="text-link text-black animate__animated animate__fadeInRightBig animate__slower"><i class="fa-solid fa-location-dot" data-fa-transform="grow-6"></i> {{ $store.state.about[0].suburb }}</div></li>
                 <li><div class="text-link text-black animate__animated animate__fadeInRightBig animate__slower"><i class="fa-regular fa-calendar" data-fa-transform="grow-6"></i> {{ $store.state.about[0].dob }}</div></li>
@@ -37,16 +37,16 @@
 
     <div class="row">
       <div class="col-lg-9">
-        <section class="resume-section experience-section mb-5"  v-for="exp in $store.state.experience" :key="exp">
+        <section class="resume-section experience-section mb-5" v-for="exp in $store.state.experience" :key="exp">
           <h2 class="resume-section-title pb-3 mb-3 animate__animated animate__fadeInLeftBig animate__slower fw-semibold">{{ exp.title }}</h2>
-          <div class="resume-position-time pb-2 animate__animated animate__fadeInLeftBig animate__slower">{{ exp.year }}</div>
-          <div class="resume-company-name fw-light ms-auto animate__animated animate__backInDown animate__slower">{{ exp.company }}</div>
+          <div class="resume-position-time pb-2 animate__animated animate__fadeInLeftBig animate__slower fst-italic">{{ exp.year }}</div>
+          <div class="resume-company-name fw-light ms-auto animate__animated animate__backInDown animate__slower fw-bold">{{ exp.company }}</div>
           <div class="resume-section-content">
             <div class="resume-timeline position-relative">
               <article class="resume-timeline-item position-relative pb-5">
                 <div class="resume-timeline-item-header mb-2">
                   <div class="d-flex flex-column flex-md-row">
-                      <p class="resume-position fw-lighter mb-1 animate__animated animate__fadeInLeftBig animate__slower">{{ exp.description }}</p>
+                      <p class="resume-position mb-1 animate__animated animate__fadeInLeftBig animate__slower">{{ exp.description }}</p>
                   </div>
                 </div>
               </article>
@@ -74,9 +74,9 @@
           <div class="resume-section-content" v-for=" educate in $store.state.education" :key="educate">
             <ul class="list-unstyled">
               <li class="mb-2">
-                  <div class="resume-degree animate__animated animate__fadeInRightBig animate__slower">{{ educate.description }}</div>
-                  <div class="resume-degree-org animate__animated animate__fadeInRightBig animate__slower">{{ educate.place }}</div>
-                  <div class="resume-degree-time animate__animated animate__fadeInRightBig animate__slower">{{ educate.year }}</div>
+                  <div class="resume-degree fw-light animate__animated animate__fadeInRightBig animate__slower">{{ educate.description }}</div>
+                  <div class="resume-degree-org fw-semibold animate__animated animate__fadeInRightBig animate__slower">{{ educate.place }}</div>
+                  <div class="resume-degree-time fst-italic animate__animated animate__fadeInRightBig animate__slower">{{ educate.year }}</div>
               </li>
             </ul>
           </div>
@@ -86,8 +86,8 @@
           <h2 class="resume-section-title fw-semibold pb-3 mb-3 animate__animated animate__fadeInRightBig animate__slower">{{$store.state.about[0].subheading4}}</h2>
           <div class="resume-section-content" >
             <ul class="list-unstyled resume-lang-list">
-              <li class="mb-2 animate__animated animate__fadeInRightBig animate__slower"><span class="resume-lang-name font-weight-bold">{{$store.state.about[0].language1}}</span> </li>
-              <li class="mb-2 align-middle animate__animated animate__fadeInRightBig animate__slower"><span class="resume-lang-name font-weight-bold">{{$store.state.about[0].language2}}</span></li>
+              <li class="mb-2 animate__animated animate__fadeInRightBig animate__slower"><span class="resume-lang-name">{{$store.state.about[0].language1}}</span> </li>
+              <li class="mb-2 align-middle animate__animated animate__fadeInRightBig animate__slower"><span class="resume-lang-name">{{$store.state.about[0].language2}}</span></li>
             </ul>
           </div>
         </section>

@@ -14,7 +14,7 @@
                                                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                             <router-link to="/">Home</router-link> 
                                          <router-link to="/about">About</router-link> 
-                                     <router-link to="/resume">Resume</router-link> 
+                                     <router-link to="/resume">Education&Experience</router-link> 
                                 <router-link to="/project">Projects</router-link> 
                             <router-link to="/testimonial">Testimonials</router-link> 
                      <router-link to="/contact">Contact</router-link>
@@ -39,7 +39,7 @@ nav a{
     font-weight: 400;
     margin-right: 0px;
     font-size: 1rem;
-    letter-spacing: 7px;
+    letter-spacing: 5px;
 
 }
 </style>

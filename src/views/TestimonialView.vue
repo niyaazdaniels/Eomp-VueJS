@@ -7,7 +7,7 @@
              <div class="image animate__animated animate__fadeInUpBig animate__slower overflow-hidden"><img :src=testimonial.image></div>   
                 <h3 class="card-title fs-5 animate__animated animate__fadeInUpBig animate__slower text-start">{{testimonial.name}} {{testimonial.surname}}</h3>
                   <h3 class="card-title fs-6 animate__animated animate__fadeInUpBig animate__slower text-start"></h3>
-                    <h6 class="fw-lighter animate__animated animate__fadeInUpBig animate__slower text-start">{{testimonial.testimonial}}</h6>
+                    <p class="fw-light animate__animated animate__fadeInUpBig animate__slower text-start">{{testimonial.testimonial}}</p>
                 </div>
             </div>
         </div>
@@ -116,6 +116,9 @@ img{
 }
 
 @media (min-width: 700px) {
+    p {
+        font-size: 10px;
+    }
     #testimonial-card {
         flex-basis: calc(calc(100% / 3) - 20px);
     }
@@ -126,6 +129,9 @@ img{
 }
 
 @media (min-width: 1100px) {
+    p {
+        font-size: 12px;
+    }
     #testimonial-card {
         flex-basis: calc(25% - 30px);
     }

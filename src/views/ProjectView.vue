@@ -89,7 +89,7 @@ export default {
     border-radius: 50%;
 }
 img{
-    height: 110px;
+    height: 100px;
 }
 i {
 color: black;
@@ -120,15 +120,11 @@ i:hover{
   background-color: #f0f0f0;
 }
 
-@media (max-width: 360px) {
-  .cards {
-    margin-bottom: 1000px;
-  }
-}
+
 @media (min-width: 500px) {
   p {
-  font-size: 10px;
-}
+  font-size: 10px; 
+  }
   #project-card {
         flex-basis: calc(50% - 10px);
         
@@ -153,6 +149,9 @@ i:hover{
         flex-basis: calc(25% - 30px);
     }
 
+    p {
+    font-size: 12px;
+    }
     #project-card:not(:last-child) {
         margin-right: 40px;
     }

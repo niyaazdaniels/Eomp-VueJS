@@ -104,7 +104,7 @@ export default {
 
 <style scoped>
 .container-fluid {
-  top: 110px;
+  top: 100px;
   position: relative;
 }
 
@@ -215,26 +215,20 @@ button:active {
     transform: translateY(-0.1em);
   }
 }
-
+@media (min-width: 280px) and (max-width: 1245px) {
+  p {
+    font-size: 10px;
+  }
+  .heading-section {
+    font-size: 20px;
+  }
+}
 @media (max-width: 618px) {
   .container-fluid{
-    top: 0;
+    top: 50;
     position: relative;
   }
 }
-@media (max-width: 375px) {
-  .heading-section {
-    font-size: 16px;
-  } 
-  p {
-    font-size: 12px;
-  }
-  .container-fluid{
-    height: auto;
-    top: 0;
-    position: relative;
-  }
- 
-}
+
 
 </style>

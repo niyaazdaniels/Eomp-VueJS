@@ -54,7 +54,7 @@ h2 {
     flex: 0 0 100%;
     padding: 20px;
     color: #FFFFFF;
-    background: #174c25;
+    background: linear-gradient(30deg, #4D774E, #164A41);
     transition: all 0.6s;
     border: none;
     margin-bottom: 15px;
@@ -84,27 +84,27 @@ img{
     height: 150px;
 }
 .cards::-webkit-scrollbar {
-    height: 12px;
-    border-radius: 30px;
-    color: #000;
-}
-.cards::-webkit-scrollbar {
-  width: 12px;
+  height: 10px;
 }
 
 .cards::-webkit-scrollbar-thumb {
-  background-color: #174c25;
+    background: linear-gradient(30deg, #4D774E, #164A41);
+    width: 5px;
+
 }
 
 .cards::-webkit-scrollbar-track {
   background-color: #f0f0f0;
 }
-@media (max-width: 360px) {
+@media (min-width: 280px) {
     p {
-        font-size: 12px;
+        font-size: 10px;
     }
     .heading {
-        font-size: 18px;
+        font-size: 14px;
+    }
+    img {
+        height: 100px;
     }
 }
 
@@ -121,10 +121,17 @@ img{
 
 @media (min-width: 700px) {
     p {
-        font-size: 10px;
+        font-size: 12px;
     }
     #testimonial-card {
         flex-basis: calc(calc(100% / 3) - 20px);
+        min-width: 310px;
+    }
+    img {
+        height: 120px;
+    }
+    .heading {
+        font-size: 1.8rem;
     }
 
     #testimonial-card:not(:last-child) {
@@ -134,10 +141,16 @@ img{
 
 @media (min-width: 1100px) {
     p {
-        font-size: 12px;
+        font-size: 14px;
     }
     #testimonial-card {
         flex-basis: calc(25% - 30px);
+    }
+    .heading {
+        font-size:2rem;
+    }
+    img {
+    height: 150px;
     }
 
     #testimonial-card:not(:last-child) {

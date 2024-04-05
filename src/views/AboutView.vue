@@ -5,7 +5,7 @@
         <div class="card text-center animate__animated animate__bounceIn">
           <div class="row g-0">
         <div class="col-lg-4">
-          <img :src="$store.state.home[0].image" class="img-fluid rounded-start">
+          <img :src="$store.state.home[0].image" class="img-fluid hover-shadow ">
         </div>
         <div class="col-lg-8">
           <div class="card-body overflow-hidden">
@@ -20,7 +20,7 @@
        <a href="https://drive.google.com/uc?export=download&id=1VhXma-9eHWEU0Y9tS-DScq7nccc9UCsZ" class="button animate__animated animate__slideInUp animate__slower" target="_blank">
         <span class="button_lg">
          <span class="button_sl"></span>
-          <span class="button_text">Download Resume</span>
+          <span class="button_text hover-shadow">Download Resume</span>
           </span>
           </a>
           </div>
@@ -200,12 +200,20 @@ i:hover{
 }
 @media (max-width: 991px) {
  .card {
-  margin-top: 40px;
+  position: relative;
+  top: 5px;
+ }
+ .card-title {
+  font-size: 2rem;
+ }
+ p {
+  text-align: start;
  }
 }
 @media (max-width: 853px) {
   img {
     height: 250px;
+    border-radius: none;
   }
 }
 @media (max-width: 679px){
@@ -219,29 +227,32 @@ i:hover{
 }
 @media (max-width: 540px) {
   img {
-    height: 150px;
+    height: 250px;
   }
-  h1 {
-    font-size: 14px;
+  .card-title {
+    font-size: 18px;
   }
   p {
     font-size: 10px;
   }
   i {
-    font-size: 10px;
+    font-size: 12px;
     margin: 0;
   }
-  .card-text {
+  .card-body {
+    padding: 5px;
+  }
+  /* .card-text {
     margin: 0;
   }
   .card {
     margin-bottom: 10px;
     margin-top: 80px;
-  }
+  } */
 }
 @media (max-width: 430px) {
   img{
-    height: 180px;
+    height: 220px;
   }
   p {
     font-size: 8px;
@@ -252,7 +263,7 @@ i:hover{
 }
 @media (max-width: 414px) {
   img{ 
-    height: 150px;
+    height: 220px;
   }
   h1 {
     font-size: 12px;
@@ -275,7 +286,7 @@ i:hover{
 }
 @media (max-width: 375px){
 img {
-  height: 150px;
+  height: 200px;
 }
 h1 {
   font-size: 10px;
@@ -301,19 +312,23 @@ span.button_lg {
 
 @media (max-width: 320px) {
   img {
-    height: 0px;
+    height: 160px;
   }
   .card-body p {
-    font-size: 10px;
+    font-size: 8px;
   }
   .card-body h1 {
-    font-size: 12px;
+    font-size: 15px;
   }
   .card-body i {
-    font-size: 10px;
+    font-size: 11px;
   }
   .card-body .button_text {
     font-size: 10px;
+  }
+  .text-heading {
+    font-size: 10px;
+    letter-spacing: 0px;
   }
 }
 @media (max-width: 280px) {

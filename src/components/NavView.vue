@@ -35,11 +35,12 @@ export default {
 nav a{
     text-decoration: none;
     color: white;
-    padding-left: 10px;
-    font-weight: 400;
+    padding-left: 8px;
+    margin-bottom: 20px;
+    font-weight: 300;
     margin-right: 0px;
     font-size: 1rem;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 
 }
 </style>

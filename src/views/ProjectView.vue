@@ -7,7 +7,7 @@
             <div class="image animate__animated animate__fadeInUpBig"><img :src="project.image"></div>
             <div class="card-body">
               <h6 class="card-title animate__animated animate__fadeInUpBig animate__slow text-uppercase">{{ project.name }}</h6>
-              <p class="card-text fw-light mt-2 animate__animated animate__fadeInUpBig animate__slow">{{ project.description }}</p>
+              <p class="card-text text-start fw-light mt-2 animate__animated animate__fadeInUpBig animate__slow">{{ project.description }}</p>
               <div class="card-text position-relative bottom-0">
                 <a :href="project.gitHub" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a :href="project.hosted" class="btn animate__animated animate__fadeInUpBig animate__slower" target="_blank"><i class="fa-solid fa-globe"></i></a>
@@ -35,7 +35,6 @@ export default {
   color: #f1b24a;
   letter-spacing: 7px;
   font-size: 35px;
-  margin-bottom: 50px;
 }
 .container {
     max-width: 100vw;
@@ -67,6 +66,9 @@ export default {
     border: none;
     color: #FFFFFF;
     margin-right: 15px;
+    margin-bottom: 20px;
+    height: 55vh;
+
 
 }
 
@@ -87,7 +89,7 @@ export default {
     border-radius: 50%;
 }
 img{
-    height: 100px;
+    height: 90px;
 }
 i {
 color: black;
@@ -106,7 +108,8 @@ i:hover{
 
 } 
 .cards::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
+  height: 10px;
 }
 
 .cards::-webkit-scrollbar-thumb {
@@ -118,10 +121,13 @@ i:hover{
   background-color: #f0f0f0;
 }
 
-@media (max-width: 300px) {
+@media (min-width: 280px) {
   #project-card {
-    height: auto;
+    height: 400px;
   }
+   p {
+    font-size: 10px;
+   }
   .heading {
     margin: 0;
     font-size: 20px;
@@ -145,20 +151,41 @@ i:hover{
 @media (min-width: 700px) {
   #project-card {
         flex-basis: calc(calc(100% / 3) - 20px);
+        transition: all 1s ease-in;
+        min-width: 290px;
     }
 
     #project-card:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 20px;
+    } 
+    i     {
+      font-size: 14px;
+    }
+    img {
+      height: 80px;
+    }
+    p {
+      font-size: 12px;
+    }
+    .heading {
+      font-size: 1.8rem;
     }
 }
+
 
 @media (min-width: 1100px) {
   #project-card {
         flex-basis: calc(25% - 30px);
+        min-height: 500px;
     }
-
     p {
-    font-size: 12px;
+    font-size: 20px;
+    }
+    img {
+      height: 120px;
+    }
+    .heading {
+      font-size: 2rem;
     }
     #project-card:not(:last-child) {
         margin-right: 40px;

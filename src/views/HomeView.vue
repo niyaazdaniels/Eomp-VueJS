@@ -9,18 +9,14 @@
       <button onclick="window.location.href='/contact'" class="box animate__animated animate__fadeInUpBig animate__slower">
     Contact Me!
 </button>
-
     </p>
 </div>
 </div>
-<Footer/>
 </template>
 <script>
 
-import Footer from '../components/FooterView.vue'
 export default {
   components: {
-    Footer
   },
   methods: {
   },

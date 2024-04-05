@@ -20,15 +20,13 @@
     <div v-else>
       <SpinnerView/>
     </div>
-    <Footer/>
   </template>
   
 
 <script>
 import SpinnerView from '@/components/SpinnerView.vue';
-import Footer from '@/components/FooterView.vue';
 export default {
-    components: { SpinnerView, Footer }
+    components: { SpinnerView }
 }
 </script>
 

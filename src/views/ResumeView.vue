@@ -106,15 +106,12 @@
     </div>
   </div>
 </div>
-<Footer/>
 </article> 
 </template>
 
 <script>
-import Footer from '../components/FooterView.vue'
 export default {
 components: {
-  Footer
 }
 }
 </script>

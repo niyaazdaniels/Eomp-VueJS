@@ -12,14 +12,11 @@
             </div>
         </div>
     </div>
-<Footer/>
 </template>
 
 <script>
-import Footer from '../components/FooterView.vue'
 
 export default {
-components: { Footer }
 }
 </script>
 

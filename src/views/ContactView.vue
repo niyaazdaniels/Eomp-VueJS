@@ -91,16 +91,12 @@
         </div>
       </div>
     </div>
-  <Footer/>
   </section>
-
 </template>
 
 <script>
-import Footer from '../components/FooterView.vue';
 export default {
   components: {
-    Footer
   }
 
 }

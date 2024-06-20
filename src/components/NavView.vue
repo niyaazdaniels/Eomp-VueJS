@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg text-uppercase fw-bold navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg text-uppercase fw-bold navbar-dark ">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">ND</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -36,11 +36,14 @@ nav a{
     text-decoration: none;
     color: white;
     padding-left: 8px;
+    margin-top: 40px;
+    padding: 10px 20px;
     margin-bottom: 20px;
     font-weight: 300;
     margin-right: 0px;
     font-size: 1rem;
     letter-spacing: 3px;
-
+    z-index: 100000;
 }
+
 </style>

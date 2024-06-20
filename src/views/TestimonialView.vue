@@ -1,17 +1,26 @@
 <template>
-  <div class="container-fluid d-flex justify-content-center align-items-center h-50 flex-column overflow-hidden">
-    <h2 class="heading animate__animated animate__fadeInDownBig text-uppercase fw-semibold overflow-hidden">Peer Reviews</h2>
-      <div class="cards">
+  <h2 class="heading animate__animated animate__fadeInDownBig text-uppercase fw-semibold overflow-hidden">Peer Reviews</h2>
+    <div class="container-fluid row-cols-5 justify-content-center">
+      <!-- <div class="cards">
         <div class="card overflow-hidden" id="testimonial-card" v-for="testimonial in $store.state.testimonials" :key="testimonial">
           <div>
              <div class="image animate__animated animate__fadeInUpBig animate__slower overflow-hidden"><img :src=testimonial.image></div>   
                 <h3 class="card-title fs-5 animate__animated animate__fadeInUpBig animate__slower text-start">{{testimonial.name}} {{testimonial.surname}}</h3>
                   <h3 class="card-title fs-6 animate__animated animate__fadeInUpBig animate__slower text-start"></h3>
-                    <p class="fw-light animate__animated animate__fadeInUpBig animate__slower text-start">{{testimonial.testimonial}}</p>
+                    <p class="fw-light animate__animated animate__fadeInUpBig animate__slower text-start">{{testimonial.testimonial}}</p> -->
+                    <div class="card" v-for="testimonial in $store.state.testimonials" :key="testimonial">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg> -->
+                     <div class="image animate__animated animate__fadeInUpBig animate__slower overflow-hidden card-img-overlay card-img-bottom"><img :src=testimonial.image></div>   
+                     <div class="card__content">
+                     <p class="card__title">{{testimonial.name}} {{testimonial.surname}}</p>
+                     <p class="card__description">{{testimonial.testimonial}}</p>
+                     </div>
+                    </div>
+
                 </div>
-            </div>
-        </div>
-    </div>
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
 </template>
 
 <script>
@@ -21,14 +30,6 @@ export default {
 </script>
 
 <style scoped>
-.container-fluid {
-    max-width: 100vw;
-    height: 100vh;
-    padding: 0px 20px;
-    margin: 0 auto;
-    top: 100px;
-    position: relative;
-}
 h2 {
     font-size: 30px;
     margin-bottom: 1em;
@@ -36,6 +37,14 @@ h2 {
     color: #F1b24a;
     letter-spacing: 5px;
 }
+ .container-fluid {
+    min-width: 100vw;
+    padding: 20px 20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+    /*
 .cards {
     display: flex;
     padding: 15px 0px;
@@ -82,79 +91,65 @@ h2 {
 
 img{
     height: 150px;
-}
-.cards::-webkit-scrollbar {
-  height: 10px;
-}
+} */
 
-.cards::-webkit-scrollbar-thumb {
-    background: linear-gradient(30deg, #4D774E, #164A41);
-    width: 5px;
+.card {
+  min-width: 280px;
+  height: 230px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 20px;
+  box-shadow: 0 0 5px   #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-}
-
-.cards::-webkit-scrollbar-track {
-  background-color: #f0f0f0;
-}
-@media (min-width: 280px) {
-    p {
-        font-size: 10px;
-    }
-    .heading {
-        font-size: 14px;
-    }
-    img {
-        height: 100px;
-    }
 }
 
-@media (min-width: 500px) {
-    #testimonial-card {
-        flex-basis: calc(50% - 10px);
-        font-size: 12px;
-    }
-
-    #testimonial-card:not(:last-child) {
-        margin-right: 20px;
-    }
+.card img {
+  height: 150px;
+  box-shadow: 0px 2px 10px  rgb(117, 116, 116);
+  width: auto;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@media (min-width: 700px) {
-    p {
-        font-size: 12px;
-    }
-    #testimonial-card {
-        flex-basis: calc(calc(100% / 3) - 20px);
-        min-width: 310px;
-    }
-    img {
-        height: 120px;
-    }
-    .heading {
-        font-size: 1.8rem;
-    }
-
-    #testimonial-card:not(:last-child) {
-        margin-right: 30px;
-    }
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
-@media (min-width: 1100px) {
-    p {
-        font-size: 14px;
-    }
-    #testimonial-card {
-        flex-basis: calc(25% - 30px);
-    }
-    .heading {
-        font-size:2rem;
-    }
-    img {
-    height: 150px;
-    }
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #d3d3d3;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-    #testimonial-card:not(:last-child) {
-        margin-right: 40px;
-    }
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover img {
+  scale: 0;
+}
+
+.card__description {
+  margin: 20px 0 0;
+  font-size: 12px;
+  color: #777;
+  line-height: 1.4;
 }
 </style>

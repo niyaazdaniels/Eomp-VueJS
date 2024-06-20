@@ -1,14 +1,12 @@
 <template>
   <div v-if="loading" class="d-flex justify-content-center align-items-center" style="height: 50vh;">
-    <div class="dot-spinner">
-    <div class="dot-spinner__dot"></div>
-    <div class="dot-spinner__dot"></div>
-    <div class="dot-spinner__dot"></div>
-    <div class="dot-spinner__dot"></div>
-    <div class="dot-spinner__dot"></div>
-    <div class="dot-spinner__dot"></div>
-    <div class="dot-spinner__dot"></div>
-    <div class="dot-spinner__dot"></div>
+    <div class="loader">
+    <div class="face">
+        <div class="circle"></div>
+    </div>
+    <div class="face">
+        <div class="circle"></div>
+    </div>
 </div>
   </div>
 </template>
@@ -16,130 +14,96 @@
 <script>
 export default {
   data() {
-      return {
-        loading: true, // Initially set loading to true
-        data: '', // Your data array
-      };
-    },
-    mounted() {
-      // Fetch data from the provided URL
-      fetch('https://niyaazdaniels.github.io/JSON/')
-        .then(response => response.json())
-        .then(data => {
-          this.data = data;
-          this.loading = false;
-        })
-        .catch(error => {
-          console.error('Error fetching data:', error);
-          this.loading = false; 
-        });
-    },
+    return {
+      loading: true, // Initially set loading to true
+      data: '', // Your data array
+    };
+  },
+  mounted() {
+    // Fetch data from the provided URL
+    fetch('https://niyaazdaniels.github.io/JSON/')
+      .then(response => response.json())
+      .then(data => {
+        this.data = data;
+        this.loading = false;
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        this.loading = false;
+      });
+  },
 }
 </script>
 
 <style scoped>
-.dot-spinner {
-  --uib-size: 2.8rem;
-  --uib-speed: .9s;
-  --uib-color: #183153;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: var(--uib-size);
-  width: var(--uib-size);
-}
-
-.dot-spinner__dot {
+.loader {
+  width: 6em;
+  height: 6em;
+  font-size: 10px;
   position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  height: 100%;
-  width: 100%;
+  justify-content: center;
 }
 
-.dot-spinner__dot::before {
-  content: '';
-  height: 20%;
-  width: 20%;
+.loader .face {
+  position: absolute;
   border-radius: 50%;
-  background-color: var(--uib-color);
-  transform: scale(0);
-  opacity: 0.5;
-  animation: pulse0112 calc(var(--uib-speed) * 1.111) ease-in-out infinite;
-  box-shadow: 0 0 20px rgba(18, 31, 53, 0.3);
+  border-style: solid;
+  animation: animate023845 3s linear infinite;
 }
 
-.dot-spinner__dot:nth-child(2) {
-  transform: rotate(45deg);
+.loader .face:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  color: gold;
+  border-color: currentColor transparent transparent currentColor;
+  border-width: 0.2em 0.2em 0em 0em;
+  --deg: -45deg;
+  animation-direction: normal;
 }
 
-.dot-spinner__dot:nth-child(2)::before {
-  animation-delay: calc(var(--uib-speed) * -0.875);
+.loader .face:nth-child(2) {
+  width: 70%;
+  height: 70%;
+  color: lime;
+  border-color: currentColor currentColor transparent transparent;
+  border-width: 0.2em 0em 0em 0.2em;
+  --deg: -135deg;
+  animation-direction: reverse;
 }
 
-.dot-spinner__dot:nth-child(3) {
-  transform: rotate(90deg);
+.loader .face .circle {
+  position: absolute;
+  width: 50%;
+  height: 0.1em;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  transform: rotate(var(--deg));
+  transform-origin: left;
 }
 
-.dot-spinner__dot:nth-child(3)::before {
-  animation-delay: calc(var(--uib-speed) * -0.75);
+.loader .face .circle::before {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  content: '';
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 2em,
+                0 0 4em,
+                0 0 6em,
+                0 0 8em,
+                0 0 10em,
+                0 0 0 0.5em rgba(255, 255, 0, 0.1);
 }
 
-.dot-spinner__dot:nth-child(4) {
-  transform: rotate(135deg);
-}
-
-.dot-spinner__dot:nth-child(4)::before {
-  animation-delay: calc(var(--uib-speed) * -0.625);
-}
-
-.dot-spinner__dot:nth-child(5) {
-  transform: rotate(180deg);
-}
-
-.dot-spinner__dot:nth-child(5)::before {
-  animation-delay: calc(var(--uib-speed) * -0.5);
-}
-
-.dot-spinner__dot:nth-child(6) {
-  transform: rotate(225deg);
-}
-
-.dot-spinner__dot:nth-child(6)::before {
-  animation-delay: calc(var(--uib-speed) * -0.375);
-}
-
-.dot-spinner__dot:nth-child(7) {
-  transform: rotate(270deg);
-}
-
-.dot-spinner__dot:nth-child(7)::before {
-  animation-delay: calc(var(--uib-speed) * -0.25);
-}
-
-.dot-spinner__dot:nth-child(8) {
-  transform: rotate(315deg);
-}
-
-.dot-spinner__dot:nth-child(8)::before {
-  animation-delay: calc(var(--uib-speed) * -0.125);
-}
-
-@keyframes pulse0112 {
-  0%,
-  100% {
-    transform: scale(0);
-    opacity: 0.5;
-  }
-
-  50% {
-    transform: scale(1);
-    opacity: 1;
+@keyframes animate023845 {
+  to {
+    transform: rotate(1turn);
   }
 }
-
 </style>

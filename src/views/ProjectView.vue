@@ -1,7 +1,7 @@
 <template>
-    <div class="container d-flex flex-column" v-if="$store.state.projects.length > 0">
+    <div class="container-fluid d-flex flex-column justify-content-center" v-if="$store.state.projects.length > 0">
       <h1 class="heading text-uppercase animate__animated animate__fadeInDownBig animate__slow fw-semibold">Projects</h1>
-      <div class="cards container-fluid m-0">
+      <!-- <div class="cards container-fluid m-0">
         <div class="card container-fluid"  id="project-card"  v-for="project in $store.state.projects" :key="project">
           <div>
             <div class="image animate__animated animate__fadeInUpBig"><img :src="project.image"></div>
@@ -14,9 +14,23 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
+         <div class="container-fluid row-cols-6 justify-content-center column">
+            <div class="card profile-card-5 me-5"  v-for="project in $store.state.projects" :key="project">
+               <div class="card-img-block">
+                  <img class="card-img-top" :src="project.image" alt="Card image cap">
+               </div>
+               <div class="card-body">
+                  <h5 class="card-title">{{ project.name }}</h5>
+                  <p class="card-text">{{ project.description }}</p>
+                  <div class="card-text d-flex justify-content-center">
+                    <a :href="project.gitHub" class="btn box" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a :href="project.hosted" class="btn box " target="_blank"><i class="fa-solid fa-globe"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
     <div v-else>
       <SpinnerView/>
     </div>
@@ -31,20 +45,131 @@ export default {
 </script>
 
 <style scoped>
+
+
+/*Profile Card 5*/
+.profile-card-5 {
+   margin-top: 50px;
+   min-width: 280px;
+   justify-content: center;
+   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.63);
+
+}
+
+.profile-card-5 .btn {
+   border-radius: 2px;
+   text-transform: uppercase;
+   font-size: 12px;
+   padding: 7px 20px;
+}
+
+.profile-card-5 .card-img-block {
+   width: 80%;
+   margin: 0 auto;
+   position: relative;
+   top: -20px;
+}
+img {
+  height: 130px;
+}
+
+.profile-card-5 .card-img-block img {
+   border-radius: 10px;
+   box-shadow: 0 0 18px rgba(0, 0, 0, 0.63);
+}
+
+.profile-card-5 h5 {
+   color: #4e5e30;
+   font-weight: 600;
+}
+
+.profile-card-5 p {
+   font-size: 14px;
+   font-weight: 300;
+}
+
+.profile-card-5 .btn-primary {
+   background-color: #4e5e30;
+   border-color: #4e5e30;
+}
+
 .heading{
   color: #f1b24a;
   letter-spacing: 7px;
   font-size: 35px;
 }
-.container {
-    max-width: 100vw;
-    padding: 20px 30px;
-    margin: 0 auto;
-    top: 100px;
-    height: 100vh;
-    position: relative;
-    height: max-content;
+.container-fluid {
+    padding: 20px 40px;
 }
+.column {
+  display: flex;
+  flex-flow: row wrap;
+}
+i {
+color: #4e5e30;
+font-size: 1.2rem;
+}
+.box {
+  width: 80px;
+  height: auto;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 5px;
+  background: transparent;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px #F1B24A;
+}
+
+.box:hover:before {
+  border-color: #F1B24A;
+  height: 100%;
+  transform: translateX(0);
+  transition: .4s transform linear, .4s height linear .4s;
+}
+
+.box:hover:after {
+  border-color: #F1B24A;
+  height: 100%;
+  transform: translateX(0);
+  transition: .4s transform linear, .4s height linear .5s;
+}
+
+/* 
+
 .cards {
     display: flex;
     padding: 20px 0px;
@@ -91,13 +216,7 @@ export default {
 img{
     height: 90px;
 }
-i {
-color: black;
-padding: 7px;
-border-radius: 15%;
-margin-top: 15px;
-font-size: 1.2rem;
-}
+
 p {
   font-size: 12px;
 }
@@ -119,76 +238,8 @@ i:hover{
 
 .cards::-webkit-scrollbar-track {
   background-color: #f0f0f0;
-}
-
-@media (min-width: 280px) {
-  #project-card {
-    height: 400px;
-  }
-   p {
-    font-size: 10px;
-   }
-  .heading {
-    margin: 0;
-    font-size: 20px;
-  }
-}
-@media (min-width: 500px) {
-  p {
-  font-size: 10px; 
-  }
-  #project-card {
-        flex-basis: calc(50% - 10px);
-    }
-    #project-card:not(:last-child) {
-        margin-right: 20px;
-    }
-    .heading {
-      margin: 15px;
-    }
-}
-
-@media (min-width: 700px) {
-  #project-card {
-        flex-basis: calc(calc(100% / 3) - 20px);
-        transition: all 1s ease-in;
-        min-width: 290px;
-    }
-
-    #project-card:not(:last-child) {
-        margin-right: 20px;
-    } 
-    i     {
-      font-size: 14px;
-    }
-    img {
-      height: 80px;
-    }
-    p {
-      font-size: 12px;
-    }
-    .heading {
-      font-size: 1.8rem;
-    }
-}
+} */
 
 
-@media (min-width: 1100px) {
-  #project-card {
-        flex-basis: calc(25% - 30px);
-        min-height: 500px;
-    }
-    p {
-    font-size: 20px;
-    }
-    img {
-      height: 120px;
-    }
-    .heading {
-      font-size: 2rem;
-    }
-    #project-card:not(:last-child) {
-        margin-right: 40px;
-    }
-}
+
 </style>

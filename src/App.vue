@@ -10,9 +10,15 @@
 // Importing 
 import NavView from './components/NavView.vue'
 import SpinnerView from './components/SpinnerView.vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 export default {
-  components: { NavView, SpinnerView },
+  components: 
+  { NavView, 
+    SpinnerView, 
+     
+  },
   computed:{
     // calling functions
   fetchHome(){
@@ -46,6 +52,7 @@ export default {
   this.fetchSkills,
   this.fetchProjects,
   this.fetchTestimonials
+  AOS.init();
  }
 }
 </script>
@@ -86,6 +93,14 @@ html::-webkit-scrollbar {
 html {
   -ms-overflow-style: none;  
   scrollbar-width: none;  
+}
+
+.bvambient_particle
+{
+	position: absolute;
+	pointer-events: none;
+	transition: top linear, left linear;
+
 }
 
 @keyframes gradient {

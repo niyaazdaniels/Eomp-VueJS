@@ -4,8 +4,8 @@
       <div class="container row d-flex flex-column justify-content-center align-content-center">
         <div class="card text-center animate__animated animate__bounceIn">
           <div class="row g-0">
-        <div class="col-lg-4">
-          <img :src="$store.state.home[0].image" class="img-fluid hover-shadow ">
+        <div class="col-lg-4 image-container">
+          <img :src="$store.state.home[0].image" class="img-fluid hover-shadow about-image">
         </div>
         <div class="col-lg-8">
           <div class="card-body overflow-hidden">
@@ -64,13 +64,12 @@ p {
 }
 .text-heading{
   color: #F1B24A;
-  letter-spacing: 8px;
 }
 .container-fluid{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  height: 90vh;
   min-width: 100vw;
   padding: 0;
 }
@@ -165,6 +164,32 @@ i:hover{
 .button:hover .button_lg::after {
   background-color: #fff;
 }
+h1 {
+  border-right: solid 3px #164A41;
+  white-space: nowrap;
+  overflow: hidden;    
+  color: rgba(255,255,255,.70);
+}
+
+/* Animation */
+h1 {
+  animation: animated-text 4s steps(60,end) 2s 1 normal both,
+             animated-cursor 600ms steps(60,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 55vw;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: #F1B24A}
+  to{border-right-color: transparent;}
+}
 
 @media (max-width: 2560px){
   .container{
@@ -173,7 +198,7 @@ i:hover{
 }
 @media (max-width: 1280px) {
 .card {
-  margin-top: 50px;
+  margin-top: 0px;
 }
 }
 @media (max-width: 1024px) {
@@ -181,14 +206,12 @@ i:hover{
     height: 300px;
   }
   h1 {
-    font-size: 14px;
+    font-size: 20px;
   }
   p {
     font-size: 12px;
   }
-  .card{
-    margin-top: 80px
-  }
+ 
   i {
     font-size: 15px;
     margin: 0;
@@ -209,28 +232,45 @@ i:hover{
  p {
   text-align: start;
  }
+ .image-container {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  padding: 20px;
+ }
+ h1 {
+  position: relative;
+  text-align: start;
+ }
+ 
 }
 @media (max-width: 853px) {
-  img {
-    height: 250px;
+  .about-image {
+    height: 280px;
     border-radius: none;
+  }
+  p {
+    font-weight: 300;
   }
 }
 @media (max-width: 679px){
-  img {
-    height: 200px;
+  .about-image {
+    height: 250px;
   }
   .card {
     font-size: 10px;
   }
+  p {
+    font-weight: 200;
+  }
 
 }
 @media (max-width: 540px) {
-  img {
-    height: 250px;
+  .about-image {
+    height: 240px;
   }
   .card-title {
-    font-size: 18px;
+    font-size: 24px;
   }
   p {
     font-size: 10px;
@@ -251,25 +291,29 @@ i:hover{
   } */
 }
 @media (max-width: 430px) {
-  img{
-    height: 220px;
+  .about-image{
+    height: 230px;
   }
   p {
-    font-size: 8px;
+    font-size: 10px;
   }
   i {
     font-size: 12px;
   }
 }
 @media (max-width: 414px) {
-  img{ 
+  .about-image{ 
     height: 220px;
+    padding: 0px;
+  }
+  .image-container{
+    padding: 5px;
   }
   h1 {
-    font-size: 12px;
+    font-size: 18px !important;
   }
   p {
-    font-size: 8px;
+    font-size: 10px;
   }
   span.button_lg{
     font-size: 12px;
@@ -285,17 +329,17 @@ i:hover{
   }
 }
 @media (max-width: 375px){
-img {
+.about-image {
   height: 200px;
 }
 h1 {
-  font-size: 10px;
+  font-size: 14px !important; 
 }
 p {
   font-size: 8px;
 }
 i {
-  font-size: 8px;
+  font-size: 10px;
 }
 span.button_lg {
   font-size: 8px;
@@ -311,8 +355,8 @@ span.button_lg {
 }
 
 @media (max-width: 320px) {
-  img {
-    height: 160px;
+  .about-image {
+    height: 180px;
   }
   .card-body p {
     font-size: 8px;

@@ -1,5 +1,6 @@
 <template>
   <!-- Calling Components  -->
+   
     <NavView/>
     <spinner-view/>
     <router-view/>

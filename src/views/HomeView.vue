@@ -12,13 +12,13 @@
                       <li></li>
                       <li></li>
                     </ul>
-                  <div class="card container-fluid d-flex align-items-center border-0 overflow-hidden h-100">
+                  <div class="card container-fluid d-flex align-items-center justify-content-center border-0 overflow-hidden">
                 <img :src=$store.state.home[0].image class="card-img-top animate__animated animate__fadeInDownBig animate__slower" alt="me">
              <div class="card-body">
              <h5 class="card-title fs-1 fst-italic fw-semibold animate__animated animate__fadeInRightBig animate__slower text-uppercase content">{{ $store.state.home[0].title }}</h5>
              <p class="card-text fs-3 fw-light animate__animated animate__fadeInLeftBig animate__slower ">{{ $store.state.home[0].intro }}</p>
              <p class="card-text text-intro d-flex text-wrap fw-light entry-summary animate__animated animate__fadeInUpBig animate__slower ">{{ $store.state.home[0].subintro }}</p>
-             <p class="card-text button d-flex justify-content-center ">
+             <p class="card-text button d-flex justify-content-center">
               <button onclick="window.location.href='/contact'" class="box animate__animated animate__fadeInUpBig animate__slower">
                Contact Me!
               </button>
@@ -44,11 +44,9 @@ export default {
 </script>
 <style scoped>
 
-
 .context {
     width: 100%;
     position: absolute;
-    top:50vh;
 }
 
 .context h1{
@@ -63,7 +61,6 @@ export default {
 
 .circles{
     position: absolute;
-    top: 50px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -248,7 +245,9 @@ img {
 .card{
   background-color: transparent;
   color: #FFFFFF;
-  top: 110px;
+  padding: 30px 0px;
+  margin: 20px 0px;
+  top: 50px;
 }
 
 a {
@@ -326,6 +325,8 @@ h5 {
   transform: translateX(0);
   transition: .4s transform linear, .4s height linear .5s;
 }
+
+
 
 button {
   color: white;

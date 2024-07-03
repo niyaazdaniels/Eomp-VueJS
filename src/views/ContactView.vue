@@ -104,7 +104,7 @@ export default {
 
 <style scoped>
 .container-fluid {
-  top: 100px;
+  top: 30px;
   position: relative;
 }
 

@@ -84,7 +84,7 @@ img {
 }
 
 .profile-card-5 p {
-   font-size: 14px;
+   font-size: 13px;
    font-weight: 300;
 }
 
@@ -103,6 +103,7 @@ img {
 }
 .column {
   display: flex;
+  justify-content: center;
   flex-flow: row wrap;
 }
 i {

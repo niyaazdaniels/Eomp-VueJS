@@ -208,7 +208,7 @@ export default {
       0% 100%
     );
   }
-
+/* comment */
   50% {
     clip-path: polygon(
       0% 60%,
